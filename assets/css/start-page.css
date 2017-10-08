@@ -1,0 +1,24 @@
+.welcome-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 500px;
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+    ), url('../img/library.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.welcome-header__header {
+    color: #FFF;
+    font-size: 64px;
+    margin: 0;
+}
+
+.welcome-header__header--small {
+    font-size: 36px;
+}
