@@ -12,3 +12,11 @@
 .info-section__text-block {
     text-align: justify;
 }
+
+.info-section a {
+    color: #444;
+}
+
+.info-section a:hover {
+    color: #000;
+}
