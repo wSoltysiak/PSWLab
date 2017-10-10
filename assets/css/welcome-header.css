@@ -1,0 +1,50 @@
+.welcome-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+    ), url('../img/library.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.welcome-header__header {
+    color: #FFF;
+    font-size: 64px;
+    margin: 0;
+}
+
+.welcome-header__header--small {
+    font-size: 36px;
+}
+
+.welcome-header__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 500px;
+}
+
+.welcome-header__menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.0)
+    )
+}
+
+.welcome-header__menu a {
+    color: #FFF;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.welcome-header__menu a:hover {
+    text-decoration: underline;
+}

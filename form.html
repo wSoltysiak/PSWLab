@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Strona biblioteki miejskiej">
+    <meta name="keywords" content="Biblioteka, Miejska, Książki, Wypożyczenia, Biblioteka Miejska, Czytanie, Czytelnictwo, Edukacja">
+    <meta name="author" content="Jakub Nadolny, Wojciech Sołtysiak">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/welcome-header.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/info-section.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/forms.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/buttons.css">
+    <title>Biblioteka miejska - zapisy zajęciowe</title>
+</head>
+<body>
+<header class="welcome-header">
+    <div class="welcome-header__menu">
+        <a href="index.html">Strona główna</a>
+        <a href="gallery.html">Galeria</a>
+        <a href="team.html">Pracownicy</a>
+        <a href="form.html"><b>Zajęcia biblioteczne</b></a>
+        <a href="mailto:bibl@zlotow.pl">Kontakt</a>
+        <a href="http://www.gminazlotow.pl/">Gmina Złotów</a>
+    </div>
+    <div class="welcome-header__container">
+        <h1 class="welcome-header__header">
+            Biblioteka miejska
+        </h1>
+        <h2 class="welcome-header__header welcome-header__header--small">
+            w Złotowie
+        </h2>
+    </div>
+</header>
+<section class="info-section">
+    <h2 class="info-section__header">
+        Formularz zapisu do zajęć bibliotecznych
+    </h2>
+    <form class="pure-form">
+        <fieldset>
+            <legend>Przedstaw się</legend>
+            <input class="pure-input-1-4" type="text" name="firstname" placeholder="Imię">
+            <input class="pure-input-1-4" type="text" name="lastname" placeholder="Nazwisko">
+            <input class="pure-input-1-4" type="email" name="email" placeholder="email">
+        </fieldset>
+
+        <fieldset>
+            <legend>Jaki gatunek książek Cię interesuje?</legend>
+            Książki
+            <select name="interests">
+                <optgroup label="Fabularne">
+                    <option value="adventure">Przygodowe</option>
+                    <option value="criminal">Kryminalne</option>
+                    <option value="fantasy">Fantastyka</option>
+                    <option value="sci-fi">Science Fiction</option>
+                </optgroup>
+                <optgroup label="Naukowe">
+                    <option value="historical">Historyczne</option>
+                </optgroup>
+            </select>
+        </fieldset>
+
+        <fieldset class="pure-group">
+            <legend>Opisz swoją ulubioną książkę</legend>
+            <input type="text" class="pure-input-1-2" placeholder="Tytuł książki">
+            <textarea maxlength="200" class="pure-input-1-2" placeholder="Co Ci sie w niej podobało?"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Do jakiej grupy chcesz uczęszczać?</legend>
+            <br><input type="radio" name="age" value="teenager"> Grupa młodzieżowa
+            <br><input type="radio" name="age" value="adult"> Grupa dla dorosłych
+            <br><input type="radio" name="age" value="senior"> Grupa dla seniorow
+        </fieldset>
+        <fieldset>
+            <legend>Zaznacz wybrane pola</legend>
+            <input id="regulamin" type="checkbox"> Zgadzam się z regulaminem zajęć.
+            <br><input id="newsletter" type="checkbox"> Chcę otrzymywać emaile z materiałami zajęciowymi.
+        </fieldset>
+        <fieldset>
+            <input class="pure-button pure-button-primary button-error" type="reset">
+            <input class="pure-button pure-button-primary" type="submit">
+        </fieldset>
+    </form>
+</section>
+</body>
+</html>

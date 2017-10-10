@@ -1,0 +1,27 @@
+.info-section {
+    display: block;
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 0 10px;
+}
+
+.info-section__header {
+    font-size: 28px;
+    margin: 50px 0 20px 0;
+}
+
+.info-section__text-block {
+    text-align: justify;
+}
+
+.info-section a {
+    color: #444;
+}
+
+.info-section a:hover {
+    color: #000;
+}
+
+.info-center {
+    text-align: center;
+}
