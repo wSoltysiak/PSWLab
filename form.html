@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/welcome-header.css">
     <link rel="stylesheet" type="text/css" href="assets/css/info-section.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/forms.css">
     <title>Biblioteka miejska - zapisy zajęciowe</title>
 </head>
 <body>
@@ -34,6 +35,44 @@
     <h2 class="info-section__header">
         Formularz zapisu do zajęć bibliotecznych
     </h2>
+    <form class="pure-form">    
+        <fieldset>
+            <legend>Przedstaw się</legend>
+            <input type="text" name="firstname" placeholder="Imię">
+            <input type="text" name="lastname" placeholder="Nazwisko">
+            <input type="email" name="email" placeholder="email">
+        </fieldset>
+        
+        <fieldset>
+            <legend>Jaki gatunek książek Cię interesuje?</legend>
+            <label for="interests">Książki</label>
+            <select name="interests">
+                <option value="adventure">Przygodowe</option>
+                <option value="criminal">Kryminalne</option>
+                <option value="historical">Historyczne</option>
+                <option value="fantasy">Fantastyka</option>
+                <option value="sci-fi">Science Fiction</option>
+            </select>
+        </fieldset>
+        
+        <fieldset class="pure-group">
+            <legend>Opisz swoją ulubioną książkę</legend>
+            <input type="text" class="pure-input-1-2" placeholder="Tytuł książki">
+            <textarea class="pure-input-1-2" placeholder="Co Ci sie w niej podobało?"></textarea>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Do jakiej grupy chcesz uczęszczać?</legend>
+            <br><input type="radio" name="age" value="teenager"> Grupa młodzieżowa
+            <br><input type="radio" name="age" value="adult"> Grupa dla dorosłych
+            <br><input type="radio" name="age" value="senior"> Grupa dla seniorow
+        </fieldset>
+        <fieldset>
+            <input id="regulamin" type="checkbox"> Zgadzam się z regulaminem zajęć.
+            <br><input type="reset">
+            <input type="submit">
+        </fieldset>
+    </form>
 </section>
 </body>
 </html>
