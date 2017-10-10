@@ -22,7 +22,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 
 .pure-table td,
 .pure-table th {
-    border-left: 1px solid #cbcbcb;/*  inner column border */
+    border-left: 1px solid #cbcbcb; /*  inner column border */
     border-width: 0 0 0 1px;
     font-size: inherit;
     margin: 0;
@@ -52,6 +52,7 @@ striping:
 .pure-table td {
     background-color: transparent;
 }
+
 .pure-table-odd td {
     background-color: #f2f2f2;
 }
@@ -65,10 +66,10 @@ striping:
 .pure-table-bordered td {
     border-bottom: 1px solid #cbcbcb;
 }
+
 .pure-table-bordered tbody > tr:last-child > td {
     border-bottom-width: 0;
 }
-
 
 /* HORIZONTAL BORDERED TABLES */
 
@@ -77,6 +78,7 @@ striping:
     border-width: 0 0 1px 0;
     border-bottom: 1px solid #cbcbcb;
 }
+
 .pure-table-horizontal tbody > tr:last-child > td {
     border-bottom-width: 0;
 }
