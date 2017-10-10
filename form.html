@@ -47,11 +47,15 @@
             <legend>Jaki gatunek książek Cię interesuje?</legend>
             Książki
             <select name="interests">
-                <option value="adventure">Przygodowe</option>
-                <option value="criminal">Kryminalne</option>
-                <option value="historical">Historyczne</option>
-                <option value="fantasy">Fantastyka</option>
-                <option value="sci-fi">Science Fiction</option>
+                <optgroup label="Fabularne">
+                    <option value="adventure">Przygodowe</option>
+                    <option value="criminal">Kryminalne</option>
+                    <option value="fantasy">Fantastyka</option>
+                    <option value="sci-fi">Science Fiction</option>
+                </optgroup>
+                <optgroup label="Naukowe">
+                    <option value="historical">Historyczne</option>
+                </optgroup>
             </select>
         </fieldset>
         
@@ -68,11 +72,12 @@
             <br><input type="radio" name="age" value="senior"> Grupa dla seniorow
         </fieldset>
         <fieldset>
+            <legend>Zaznacz wybrane pola</legend>
             <input id="regulamin" type="checkbox"> Zgadzam się z regulaminem zajęć.
             <br><input id="newsletter" type="checkbox"> Chcę otrzymywać emaile z materiałami zajęciowymi.
         </fieldset>
         <fieldset>
-            <br><input type="reset">
+            <input type="reset">
             <input type="submit">
         </fieldset>
     </form>
