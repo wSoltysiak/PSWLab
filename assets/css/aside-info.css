@@ -1,0 +1,10 @@
+.aside-info {
+    font-size: 11px;
+    text-align: justify;
+}
+
+.aside-info--header {
+    font-size: 12px;
+    font-weight: 700;
+    margin: 5px 0;
+}
