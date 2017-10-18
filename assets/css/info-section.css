@@ -19,6 +19,11 @@
     text-align: justify;
 }
 
+.info-section__text-block--inline {
+    display: flex;
+    align-items: center;
+}
+
 .info-section a {
     color: #444;
 }
