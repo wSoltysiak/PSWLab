@@ -10,18 +10,19 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/welcome-header.css">
     <link rel="stylesheet" type="text/css" href="assets/css/info-section.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main-footer.css">
     <title>Biblioteka miejska - strona główna</title>
 </head>
 <body>
 <header class="welcome-header">
-    <div class="welcome-header__menu">
+    <nav class="welcome-header__menu">
         <a href="index.html"><b>Strona główna</b></a>
         <a href="gallery.html">Galeria</a>
         <a href="team.html">Pracownicy</a>
         <a href="form.html">Zajęcia biblioteczne</a>
         <a href="mailto:bibl@zlotow.pl">Kontakt</a>
         <a href="http://www.gminazlotow.pl/">Gmina Złotów</a>
-    </div>
+    </nav>
     <div class="welcome-header__container">
         <h1 class="welcome-header__header">
             Biblioteka miejska
@@ -32,52 +33,67 @@
     </div>
 </header>
 <section class="info-section">
-    <h2 class="info-section__header">
-        Witaj!
-    </h2>
-    <p class="info-section__text-block">
-        <b>Biblioteka miejska w Złotowie</b> jest ważną częścią życia społecznego miasta i regionu. Oferuje znacznie więcej, niż dostęp do książek
-        (choć to oczywiście priorytet działalności). Biblioteka jest więc także miejscem spotkań, wymiany myśli, nauki i rozrywki. To, w końcu
-        instytucja pomagająca samorządowi w realizacji ważnych zadań i rozwiązywaniu problemów społecznych.
-    </p>
+    <h2 class="info-section__header--big">Informacje o naszej bibliotece</h2>
+    <article>
+        <h3 class="info-section__header">
+            O nas
+        </h3>
+        <p class="info-section__text-block">
+            <b>Biblioteka miejska w Złotowie</b> jest ważną częścią życia społecznego miasta i regionu. Oferuje znacznie więcej, niż dostęp do książek
+            (choć to oczywiście priorytet działalności). Biblioteka jest więc także miejscem <mark>spotkań, wymiany myśli, nauki i rozrywki</mark>. To, w końcu
+            instytucja pomagająca samorządowi w realizacji ważnych zadań i rozwiązywaniu problemów społecznych.
+        </p>
+    </article>
 
-    <h2 id="tasks" class="info-section__header">
-        Zadania realizowane przez naszą bibliotekę
-    </h2>
-    <ul>
-        <li>
-            zapewnienie dostępu do książek m.in
+    <section>
+        <h2 class="info-section__header--big">Co się u nas dzieje?</h2>
+        <article>
+            <h3 id="tasks" class="info-section__header">
+                Zadania realizowane przez naszą bibliotekę
+            </h3>
             <ul>
-                <li>powieści</li>
-                <li>fantasy</li>
-                <li>kryminałów</li>
-                <li>i wielu innych</li>
+                <li>
+                    zapewnienie dostępu do książek m.in
+                    <ul>
+                        <li>powieści</li>
+                        <li>fantasy</li>
+                        <li>kryminałów</li>
+                        <li>i wielu innych</li>
+                    </ul>
+                </li>
+                <li>zapewnienie bezpłatnego dostępu do kultury</li>
+                <li>integrowanie środowiska i budowanie więzi,</li>
+                <li>dbanie o równy dostęp do wiedzy dla wszystkich,</li>
+                <li>przeciwdziałanie wykluczeniu, a szczególnie wykluczeniu cyfrowemu osób starszych,</li>
+                <li>ułatwianie realizacji zasady równości szans w edukacji,</li>
+                <li>stwarzanie warunków do rozwoju i zdobywania wiedzy</li>
             </ul>
-        </li>
-        <li>zapewnienie bezpłatnego dostępu do kultury</li>
-        <li>integrowanie środowiska i budowanie więzi,</li>
-        <li>dbanie o równy dostęp do wiedzy dla wszystkich,</li>
-        <li>przeciwdziałanie wykluczeniu, a szczególnie wykluczeniu cyfrowemu osób starszych,</li>
-        <li>ułatwianie realizacji zasady równości szans w edukacji,</li>
-        <li>stwarzanie warunków do rozwoju i zdobywania wiedzy</li>
-    </ul>
+        </article>
 
-    <h2 id="actions" class="info-section__header">
-        Działania podjęte w roku 2016
-    </h2>
-    <ol>
-        <li>Oseskowy Klubik Bajkowy</li>
-        <li>Spotkania z głośnym czytaniem w ramach Kampanii Społecznej Fundacji ABC XXI</li>
-        <li>Cała Polska czyta dzieciom</li>
-        <li>Zajęcia na letnie i zimowe przerwy wakacyjne</li>
-    </ol>
+        <article>
+            <h3 id="actions" class="info-section__header">
+                Działania podjęte w roku 2016
+            </h3>
+            <ol>
+                <li>Oseskowy Klubik Bajkowy</li>
+                <li>Spotkania z głośnym czytaniem w ramach Kampanii Społecznej Fundacji ABC XXI</li>
+                <li>Cała Polska czyta dzieciom</li>
+                <li>Zajęcia na letnie i zimowe przerwy wakacyjne</li>
+            </ol>
+        </article>
+    </section>
 
-    <h2 class="info-section__header">
-        Pliki do pobrania
-    </h2>
-    <a href="http://zlotow.biuletyn.net/fls/bip_pliki/2015_04/BIPF5147343256C45Z/ogloszenie_-_nabor_wnioskow_na_dofinansowanie.pdf"
-       download="ogloszenie.pdf">Ogłoszenie Gminy Złotów</a>
-    <a href="ftp://sunsite.icm.edu.pl/pub/BSD/FreeBSD/releases/amd64/11.1-RELEASE/kernel.txz" download="kernel.txz">FreeBSD</a>
+    <article>
+        <h3 class="info-section__header">
+            Pliki do pobrania
+        </h3>
+        <a href="http://zlotow.biuletyn.net/fls/bip_pliki/2015_04/BIPF5147343256C45Z/ogloszenie_-_nabor_wnioskow_na_dofinansowanie.pdf"
+           download="ogloszenie.pdf">Ogłoszenie Gminy Złotów</a>
+        <a href="ftp://sunsite.icm.edu.pl/pub/BSD/FreeBSD/releases/amd64/11.1-RELEASE/kernel.txz" download="kernel.txz">FreeBSD</a>
+    </article>
 </section>
+<footer class="main-footer">
+    <span class="main-footer__text">&copy; Biblioteka miejska w Złotowie - 2017</span>
+</footer>
 </body>
 </html>

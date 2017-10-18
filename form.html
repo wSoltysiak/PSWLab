@@ -12,18 +12,19 @@
     <link rel="stylesheet" type="text/css" href="assets/css/info-section.css">
     <link rel="stylesheet" type="text/css" href="assets/css/forms.css">
     <link rel="stylesheet" type="text/css" href="assets/css/buttons.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main-footer.css">
     <title>Biblioteka miejska - zapisy zajęciowe</title>
 </head>
 <body>
 <header class="welcome-header">
-    <div class="welcome-header__menu">
+    <nav class="welcome-header__menu">
         <a href="index.html">Strona główna</a>
         <a href="gallery.html">Galeria</a>
         <a href="team.html">Pracownicy</a>
         <a href="form.html"><b>Zajęcia biblioteczne</b></a>
         <a href="mailto:bibl@zlotow.pl">Kontakt</a>
         <a href="http://www.gminazlotow.pl/">Gmina Złotów</a>
-    </div>
+    </nav>
     <div class="welcome-header__container">
         <h1 class="welcome-header__header">
             Biblioteka miejska
@@ -35,14 +36,72 @@
 </header>
 <section class="info-section">
     <h2 class="info-section__header">
-        Formularz zapisu do zajęć bibliotecznych
+        Formularz zapisu do zajęć bibliotecznych - cz. 1
     </h2>
-    <form class="pure-form">
-        <fieldset>
+    <form class="pure-form" action="form-next.html" method="POST">
+        <fieldset class="pure-form-aligned">
             <legend>Przedstaw się</legend>
-            <input class="pure-input-1-4" type="text" name="firstname" placeholder="Imię">
-            <input class="pure-input-1-4" type="text" name="lastname" placeholder="Nazwisko">
-            <input class="pure-input-1-4" type="email" name="email" placeholder="email">
+            <div class="pure-control-group">
+                <input class="pure-input-1-3"
+                       type="text"
+                       name="firstname"
+                       id="firstname"
+                       placeholder="Imię"
+                       autocomplete="on"
+                       autofocus>
+                <label class="pure-form-message-inline" for="firstname">Wpisz swoje imię.</label>
+            </div>
+            <div class="pure-control-group">
+                <input class="pure-input-1-3"
+                       type="text"
+                       id="lastname"
+                       name="lastname"
+                       placeholder="Nazwisko"
+                       autocomplete="on"
+                       required>
+                <label class="pure-form-message-inline" for="lastname">Wpisz swoje nazwisko.</label>
+            </div>
+            <div class="pure-control-group">
+                <input class="pure-input-1-3"
+                       id="months-visible"
+                       list="months"
+                       placeholder="Miesiąc">
+                <datalist id="months">
+                    <option value="Styczeń">
+                    <option value="Luty">
+                    <option value="Marzec">
+                    <option value="Kwiecień">
+                    <option value="Maj">
+                    <option value="Czerwiec">
+                    <option value="Lipiec">
+                    <option value="Sierpień">
+                    <option value="Wrzesień">
+                    <option value="Paźdiernik">
+                    <option value="Listopad">
+                    <option value="Grudzień">
+                </datalist>
+                <label class="pure-form-message-inline" for="months-visible">Wpisz swoj miesiąc urodzenia.</label>
+            </div>
+            <div class="pure-control-group">
+                <input class="pure-input-1-3"
+                       type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Adres email"
+                       autocomplete="on"
+                       required>
+                <label class="pure-form-message-inline" for="email">Wpisz swoj email. Należy użyć znaku @.</label>
+            </div>
+            <div class="pure-control-group">
+                <input class="pure-input-1-3"
+                       type="tel"
+                       id="tel"
+                       name="tel"
+                       placeholder="999 999 999"
+                       autocomplete="on"
+                       pattern="\d{3}[\s]\d{3}[\s]\d{3}">
+                <label class="pure-form-message-inline" for="tel">Wpisz swoj numer telefonu. Tylko cyfry.</label>
+            </div>
         </fieldset>
 
         <fieldset>
@@ -63,13 +122,17 @@
 
         <fieldset class="pure-group">
             <legend>Opisz swoją ulubioną książkę</legend>
-            <input type="text" class="pure-input-1-2" placeholder="Tytuł książki">
-            <textarea maxlength="200" class="pure-input-1-2" placeholder="Co Ci sie w niej podobało?"></textarea>
+            <input class="pure-input-1-2"
+                   type="text"
+                   placeholder="Tytuł książki">
+            <textarea class="pure-input-1-2"
+                      maxlength="200"
+                      placeholder="Co Ci sie w niej podobało?"></textarea>
         </fieldset>
 
         <fieldset>
             <legend>Do jakiej grupy chcesz uczęszczać?</legend>
-            <br><input type="radio" name="age" value="teenager"> Grupa młodzieżowa
+            <input type="radio" name="age" value="teenager"> Grupa młodzieżowa
             <br><input type="radio" name="age" value="adult"> Grupa dla dorosłych
             <br><input type="radio" name="age" value="senior"> Grupa dla seniorow
         </fieldset>
@@ -84,5 +147,8 @@
         </fieldset>
     </form>
 </section>
+<footer class="main-footer">
+    <span class="main-footer__text">&copy; Biblioteka miejska w Złotowie - 2017</span>
+</footer>
 </body>
 </html>

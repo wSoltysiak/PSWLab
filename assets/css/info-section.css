@@ -7,11 +7,21 @@
 
 .info-section__header {
     font-size: 28px;
-    margin: 50px 0 20px 0;
+    margin: 20px 0 20px 0;
+}
+
+.info-section__header--big {
+    font-size: 36px;
+    margin: 50px 0 0;
 }
 
 .info-section__text-block {
     text-align: justify;
+}
+
+.info-section__text-block--inline {
+    display: flex;
+    align-items: center;
 }
 
 .info-section a {

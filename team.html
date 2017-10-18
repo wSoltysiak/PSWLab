@@ -11,19 +11,21 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/welcome-header.css">
     <link rel="stylesheet" type="text/css" href="assets/css/info-section.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/aside-info.css">
     <link rel="stylesheet" type="text/css" href="assets/css/tables.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main-footer.css">
     <title>Biblioteka miejska - pracownicy</title>
 </head>
 <body>
 <header class="welcome-header">
-    <div class="welcome-header__menu">
+    <nav class="welcome-header__menu">
         <a href="index.html">Strona główna</a>
         <a href="gallery.html">Galeria</a>
         <a href="team.html"><b>Pracownicy</b></a>
         <a href="form.html">Zajęcia biblioteczne</a>
         <a href="mailto:bibl@zlotow.pl">Kontakt</a>
         <a href="http://www.gminazlotow.pl/">Gmina Złotów</a>
-    </div>
+    </nav>
     <div class="welcome-header__container">
         <h1 class="welcome-header__header">
             Biblioteka miejska
@@ -34,7 +36,7 @@
     </div>
 </header>
 <section class="info-section">
-    <h2 class="team-section__header">
+    <h2 class="info-section__header">
         Spis pracownikow biblioteki
     </h2>
     <table class="pure-table pure-table-bordered">
@@ -47,7 +49,16 @@
         </tr>
         </thead>
         <tr>
-            <td colspan="4" class="info-center">Entuzjaści kryminałow</td>
+            <td colspan="4" class="info-center">
+                <details>
+                    <summary>Entuzjaści kryminałow</summary>
+                    <p class="info-section__text-block">
+                        Kryminał - odmiana powieści charakteryzująca się fabułą zorganizowaną wokół zbrodni, okoliczności dojścia do niej, dochodzenia
+                        oraz ujawnienia osoby sprawcy. Współcześnie, w najbardziej zasadniczym podziale, przyjmuje się, że powieść kryminalna dzieli
+                        się na cztery pododmiany.
+                    </p>
+                </details>
+            </td>
         </tr>
         <tr>
             <td>Henryk</td>
@@ -83,7 +94,19 @@
             </td>
         </tr>
         <tr>
-            <td colspan="4" class="info-center">Entuzjaści fantastyki</td>
+            <td colspan="4" class="info-center">
+                <details>
+                    <summary>Entuzjaści fantastyki</summary>
+                    <p class="info-section__text-block">
+                        Fantastykę cechuje duża swoboda w zakresie konstrukcji świata przedstawionego i postaci bohaterów. Swoboda niekoniecznie
+                        jednak
+                        oznacza absolutną dowolność – wiele utworów z tej kategorii zostaje umieszczonych w pseudorzeczywistości (pewne aspekty są
+                        zgodne
+                        z faktami, np. historią czy fizyką) lub rzeczywistości wygenerowanej (wtedy reguły takie najczęściej spisane, odnoszą się do
+                        wszystkich utworów napisanych w danej serii – przykładem może być książka J.R.R. Tolkiena Władca Pierścieni).
+                    </p>
+                </details>
+            </td>
         </tr>
         <tr>
             <td>Zdzisław</td>
@@ -122,7 +145,19 @@
             </td>
         </tr>
         <tr>
-            <td colspan="4" class="info-center">Entuzjaści książek historycznych</td>
+            <td colspan="4" class="info-center">
+                <details>
+                    <summary>Entuzjaści książek historycznych</summary>
+                    <p class="info-section__text-block">
+                        Powieść historyczna – jedna z odmian powieści, w której powstanie w nowożytnej formie datuje się na początek XIX wieku. Jej
+                        korzenie, według niektórych badaczy, sięgają starożytności (Odyseja), a przede wszystkim – średniowiecznych romansów
+                        rycerskich, czy późniejszych XVI lub XVII-wiecznych romansów awanturniczych. Powieść historyczna jest utworem dymorficznym,
+                        powstałym na dwóch podstawowych płaszczyznach konstrukcji fabuły – historycznej i literackiej, przy czym w zależności od
+                        obowiązujących nurtów czy prądów literackich, zdolności pisarskich twórców i oczekiwań czytelniczych, wzajemny stosunek tych
+                        dwóch płaszczyzn w trakcie ewolucji gatunku ulegał zmianie.
+                    </p>
+                </details>
+            </td>
         </tr>
         <tr>
             <td>Piotr</td>
@@ -144,6 +179,55 @@
             <td>Posieja</td>
         </tr>
     </table>
+
+    <article>
+        <h2 class="info-section__header">Kariera</h2>
+        <p class="info-section__text-block">
+            Nasza biblioteka cały czas prowadzi rekrutacje na
+            <mark>dobrze płatne i prestiżowe</mark>
+            stanowiska:
+        </p>
+        <table class="pure-table pure-table-bordered">
+            <thead>
+            <tr class="info-center">
+                <th>Stanowisko</th>
+                <th>Wolne miejsca</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="info-center">
+                <td>Manager ksiażek historycznych</td>
+                <td>
+                    <meter value="3" min="0" max="4">3/4</meter>
+                    3/4
+                </td>
+            </tr>
+            <tr class="info-center">
+                <td>Starszy układacz ksiażek</td>
+                <td>
+                    <meter value="2" min="0" max="9">2/9</meter>
+                    2/9
+                </td>
+            </tr>
+            <tr class="info-center">
+                <td>Architekt infrastruktury wolnych półek</td>
+                <td>
+                    <meter value="0" min="0" max="1">0/1</meter>
+                    0/1
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <aside class="aside-info">
+            <h3 class="aside-info__header">Psst...</h3>
+            Każdy z naszych pracowników otrzymuje opiekę zdrowotną i kartę MultiSport. Wiemy też, że w pracy należy się czasami odpoczynek -
+            dlatego oddajemy do dyspozycji pomieszczenie z bilardem i piłkarzykami.
+        </aside>
+    </article>
 </section>
+<footer class="main-footer">
+    <span class="main-footer__text">&copy; Biblioteka miejska w Złotowie - 2017</span>
+</footer>
 </body>
 </html>
