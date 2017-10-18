@@ -236,7 +236,6 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     text-align: right;
     display: inline-block;
     vertical-align: middle;
-    width: 10em;
     margin: 0 1em 0 0;
 }
 
