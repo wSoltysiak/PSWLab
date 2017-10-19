@@ -3,15 +3,16 @@
     max-width: 700px;
     margin: 60px auto;
     padding: 0 10px;
+    font-size: 12pt;
 }
 
 .info-section__header {
-    font-size: 28px;
+    font-size: 1.8em;
     margin: 20px 0 20px 0;
 }
 
 .info-section__header--big {
-    font-size: 36px;
+    font-size: 233%;
     margin: 50px 0 0;
 }
 
