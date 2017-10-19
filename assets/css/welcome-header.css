@@ -1,4 +1,4 @@
-.welcome-header {
+#welcome-header {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -39,12 +39,12 @@
     )
 }
 
-.welcome-header__menu a {
+.welcome-header__menu > a {
     color: #FFF;
     padding: 10px;
     text-decoration: none;
 }
 
-.welcome-header__menu a:hover {
+.welcome-header__menu > a:hover {
     text-decoration: underline;
 }
