@@ -1,0 +1,19 @@
+.dropdown-menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.0)
+    )
+}
+
+.dropdown-menu a {
+    color: #FFF;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    text-decoration: underline;
+}
