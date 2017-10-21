@@ -13,25 +13,33 @@
     <title>Losowe reguły CSS</title>
 </head>
 <body>
-    <div id="header-container">
-        <div class="header-container__text">Strona do testów CSS</div>
-        <div class="header-container__text header-container__text--medium">Średni tekst</div>
-        <div class="header-container__text header-container__text--small">Mniejszy tekst</div>
+<div id="header-container">
+    <div class="header-container__text">Strona do testów CSS</div>
+    <div class="header-container__text header-container__text--medium header-container__text--small-caps">Średni tekst z small caps</div>
+    <div class="header-container__text header-container__text--small header-container__text--italic">Mniejszy tekst napisany kursywą</div>
+</div>
+<div class="main-container">
+    <h1>background-attachment:</h1>
+    <div class="static-background-container">
+        <div class="static-background-container__expander"></div>
     </div>
-    <div class="main-container">
-        <h1>Zastosowanie background-attachment:</h1>
-        <div class="static-background-container">
-            <div class="static-background-container__expander"></div>
-        </div>
 
-        <div class="selector-test">
-            <h1>Test selektora ></h1>
-            <p>Dziecko selector-test</p>
-            <p>Dziecko selector-test 2</p>
-            <div>
-                <p>Element w kolejnym zagnieżdżeniu - brak koloru</p>
-            </div>
+    <h1>Test selektora ></h1>
+    <div class="selector-test">
+        <p>Dziecko selector-test</p>
+        <p>Dziecko selector-test 2</p>
+        <div>
+            <p class="selector-test__text-with-line-height">Element w kolejnym zagnieżdżeniu, z zwięszkoną interlinią. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Donec sem est, fringilla ac porttitor nec, cursus vitae lectus. Suspendisse malesuada erat dolor,
+                malesuada tempus urna hendrerit sit amet. Aenean sed malesuada libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Quisque ut sem nulla. Nam tortor magna, condimentum at feugiat vel, pellentesque nec purus. Donec tincidunt felis tempus felis
+                aliquet, vitae venenatis felis tempor. Phasellus elementum lorem in lorem varius, in consectetur enim posuere. Nulla maximus sapien
+                non posuere mollis. Aenean ac interdum erat. Suspendisse ultrices dignissim mollis. Nam tristique feugiat tellus et iaculis. In
+                volutpat non magna malesuada condimentum. Nulla gravida tellus non feugiat pretium. Suspendisse quis tincidunt dolor.
+
+            </p>
         </div>
     </div>
+</div>
 </body>
 </html>
