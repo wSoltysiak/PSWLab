@@ -30,13 +30,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-items: center;
     margin: 30px 0;
 }
 
 .static-background-container {
     height: 200px;
     width: 50%;
-    max-width: 500px;
+    max-width: 600px;
     overflow-x: hidden;
     overflow-y: scroll;
     background: url('http://lorempixel.com/600/200/animals') scroll;
@@ -45,4 +46,12 @@ body {
 .static-background-container__expander {
     height: 400px;
     width: 100%;
+}
+
+.selector-test {
+    width: 600px;
+}
+
+.selector-test > p {
+    color: #074F57;
 }
