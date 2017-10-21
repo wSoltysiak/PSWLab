@@ -41,12 +41,12 @@
     text-decoration: underline;
 }
 
-#category1:hover > #category1-submenu,
-#category2:hover > #category2-submenu,
-#category3:hover > #category3-submenu,
-#subcategory1:hover > #category1-subsubmenu,
-#subcategory2:hover > #category2-subsubmenu,
-#subcategory3:hover > #category3-subsubmenu
+#category1:hover > #category1__submenu,
+#category2:hover > #category2__submenu,
+#category3:hover > #category3__submenu,
+#subcategory1:hover > #subcategory1__submenu,
+#subcategory2:hover > #subcategory2__submenu,
+#subcategory3:hover > #subcategory3__submenu
 {
     display: block;
 }
