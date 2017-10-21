@@ -1,5 +1,5 @@
 body {
-    background: url("../assets/memphis-colorful.png") repeat;
+    background: url("../img/memphis-colorful.png") repeat;
 }
 
 #header-container {
@@ -39,7 +39,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     margin: 30px 0;
 }
 
@@ -55,16 +55,4 @@ body {
 .static-background-container__expander {
     height: 400px;
     width: 100%;
-}
-
-.selector-test {
-    width: 600px;
-}
-
-.selector-test > p {
-    color: #074F57;
-}
-
-.selector-test__text-with-line-height {
-    line-height: 32px;
 }
