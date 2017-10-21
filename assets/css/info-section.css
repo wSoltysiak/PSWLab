@@ -25,11 +25,11 @@
     align-items: center;
 }
 
-.info-section > a {
+.info-section a {
     color: #444;
 }
 
-.info-section > a:hover {
+.info-section a:hover {
     color: #000;
 }
 
