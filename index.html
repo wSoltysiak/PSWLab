@@ -17,12 +17,53 @@
 <body>
 <header class="welcome-header">
     <nav class="dropdown-menu">
-        <a href="index.html"><b>Strona główna</b></a>
-        <a href="gallery.html">Galeria</a>
-        <a href="team.html">Pracownicy</a>
-        <a href="form.html">Zajęcia biblioteczne</a>
-        <a href="mailto:bibl@zlotow.pl">Kontakt</a>
-        <a href="http://www.gminazlotow.pl/">Gmina Złotów</a>
+        <ul class="dropdown-menu__level-first">
+            <li><a href="index.html"><b>Strona główna</b></a></li>
+            <li><a href="gallery.html">Galeria</a></li>
+            <li><a href="team.html">Pracownicy</a></li>
+            <li><a href="form.html">Zajęcia biblioteczne</a></li>
+            <li><a href="mailto:bibl@zlotow.pl">Kontakt</a></li>
+            <li><a href="http://www.gminazlotow.pl/">Gmina Złotów</a></li>
+            <li id="category1">Kategoria 1
+                <ul id="category1-submenu" class="dropdown-menu__level-second">
+                    <li>Podkategoria 1</li>
+                    <li>Podkategoria 2</li>
+                    <li id="subcategory1">Podkategoria 3
+                        <ul id="category1-subsubmenu" class="dropdown-menu__level-third">
+                            <li>Podkategoria 1</li>
+                            <li>Podkategoria 2</li>
+                            <li>Podkategoria 3</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="category2">Kategoria 2
+                <ul id="category2-submenu" class="dropdown-menu__level-second">
+                    <li>Podkategoria 1</li>
+                    <li>Podkategoria 2</li>
+                    <li id="subcategory2">Podkategoria 3
+                        <ul id="category2-subsubmenu" class="dropdown-menu__level-third">
+                            <li>Podkategoria 1</li>
+                            <li>Podkategoria 2</li>
+                            <li>Podkategoria 3</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="category3">Kategoria 3
+                <ul id="category3-submenu" class="dropdown-menu__level-second">
+                    <li>Podkategoria 1</li>
+                    <li>Podkategoria 2</li>
+                    <li id="subcategory3">Podkategoria 3
+                        <ul id="category3-subsubmenu" class="dropdown-menu__level-third">
+                            <li>Podkategoria 1</li>
+                            <li>Podkategoria 2</li>
+                            <li>Podkategoria 3</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
     </nav>
     <div class="welcome-header__container">
         <h1 class="welcome-header__header">
