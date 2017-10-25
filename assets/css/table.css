@@ -30,6 +30,13 @@
     border-bottom: 1px solid #cbcbcb;
 }
 
-.library-table td:first-child, .library-table th:first-child {
-    border-left-width: 0;
+.library-table td:last-child{
+    background: #eee;
+}
+
+tr:last-of-type{
+    background: #bbb;
+}
+.library-table td:nth-child(3){
+    color:brown;
 }

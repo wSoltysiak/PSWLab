@@ -64,3 +64,7 @@
     position: relative;
     top: -1px;
 }
+
+.library-form input:required{
+    border-bottom-color: crimson;
+}
