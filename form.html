@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/welcome-header.css">
     <link rel="stylesheet" type="text/css" href="assets/css/info-section.css">
     <link rel="stylesheet" type="text/css" href="assets/css/dropdown-menu.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/forms.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/form.css">
     <link rel="stylesheet" type="text/css" href="assets/css/buttons.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main-footer.css">
     <title>Biblioteka miejska - zapisy zajęciowe</title>
@@ -80,31 +80,31 @@
     <h2 class="info-section__header">
         Formularz zapisu do zajęć bibliotecznych - cz. 1
     </h2>
-    <form class="pure-form" action="form-next.html" method="POST">
-        <fieldset class="pure-form-aligned">
+    <form class="library-form" action="form-next.html" method="POST">
+        <fieldset class="library-form-aligned">
             <legend>Przedstaw się</legend>
-            <div class="pure-control-group">
-                <input class="pure-input-1-3"
+            <div class="library-control-group">
+                <input class="library-input-1-3"
                        type="text"
                        name="firstname"
                        id="firstname"
                        placeholder="Imię"
                        autocomplete="on"
                        autofocus>
-                <label class="pure-form-message-inline" for="firstname">Wpisz swoje imię.</label>
+                <label class="library-form-message-inline" for="firstname">Wpisz swoje imię.</label>
             </div>
-            <div class="pure-control-group">
-                <input class="pure-input-1-3"
+            <div class="library-control-group">
+                <input class="library-input-1-3"
                        type="text"
                        id="lastname"
                        name="lastname"
                        placeholder="Nazwisko"
                        autocomplete="on"
                        required>
-                <label class="pure-form-message-inline" for="lastname">Wpisz swoje nazwisko.</label>
+                <label class="library-form-message-inline" for="lastname">Wpisz swoje nazwisko.</label>
             </div>
-            <div class="pure-control-group">
-                <input class="pure-input-1-3"
+            <div class="library-control-group">
+                <input class="library-input-1-3"
                        id="months-visible"
                        list="months"
                        placeholder="Miesiąc">
@@ -122,27 +122,27 @@
                     <option value="Listopad">
                     <option value="Grudzień">
                 </datalist>
-                <label class="pure-form-message-inline" for="months-visible">Wpisz swoj miesiąc urodzenia.</label>
+                <label class="library-form-message-inline" for="months-visible">Wpisz swoj miesiąc urodzenia.</label>
             </div>
-            <div class="pure-control-group">
-                <input class="pure-input-1-3"
+            <div class="library-control-group">
+                <input class="library-input-1-3"
                        type="email"
                        id="email"
                        name="email"
                        placeholder="Adres email"
                        autocomplete="on"
                        required>
-                <label class="pure-form-message-inline" for="email">Wpisz swoj email. Należy użyć znaku @.</label>
+                <label class="library-form-message-inline" for="email">Wpisz swoj email. Należy użyć znaku @.</label>
             </div>
-            <div class="pure-control-group">
-                <input class="pure-input-1-3"
+            <div class="library-control-group">
+                <input class="library-input-1-3"
                        type="tel"
                        id="tel"
                        name="tel"
                        placeholder="999 999 999"
                        autocomplete="on"
                        pattern="\d{3}[\s]\d{3}[\s]\d{3}">
-                <label class="pure-form-message-inline" for="tel">Wpisz swoj numer telefonu. Tylko cyfry.</label>
+                <label class="library-form-message-inline" for="tel">Wpisz swoj numer telefonu. Tylko cyfry.</label>
             </div>
         </fieldset>
 
@@ -162,12 +162,12 @@
             </select>
         </fieldset>
 
-        <fieldset class="pure-group">
+        <fieldset class="library-group">
             <legend>Opisz swoją ulubioną książkę</legend>
-            <input class="pure-input-1-2"
+            <input class="library-input-1-2"
                    type="text"
                    placeholder="Tytuł książki">
-            <textarea class="pure-input-1-2"
+            <textarea class="library-input-1-2"
                       maxlength="200"
                       placeholder="Co Ci sie w niej podobało?"></textarea>
         </fieldset>
