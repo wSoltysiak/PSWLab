@@ -1,4 +1,4 @@
-.pure-table {
+.library-table {
     border-collapse: collapse;
     border-spacing: 0;
     empty-cells: show;
@@ -7,18 +7,18 @@
 
 }
 
-.pure-table thead {
+.library-table thead {
     background-color: #e0e0e0;
     color: #000;
     text-align: left;
     vertical-align: bottom;
 }
 
-.pure-table td:first-child, .pure-table th:first-child {
+.library-table td:first-child, .library-table th:first-child {
     border-left-width: 0;
 }
 
-.pure-table td, .pure-table th {
+.library-table td, .library-table th {
     border-left: 1px solid #cbcbcb;
     border-width: 0 0 0 1px;
     font-size: inherit;
@@ -28,6 +28,6 @@
     border-bottom: 1px solid #cbcbcb;
 }
 
-.pure-table td:first-child, .pure-table th:first-child {
+.library-table td:first-child, .library-table th:first-child {
     border-left-width: 0;
 }
