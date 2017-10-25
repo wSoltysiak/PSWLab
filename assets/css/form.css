@@ -19,20 +19,7 @@
     background-color: white;
 }
 
-.library-form input[type="text"],
-.library-form input[type="password"],
-.library-form input[type="email"],
-.library-form input[type="url"],
-.library-form input[type="date"],
-.library-form input[type="month"],
-.library-form input[type="time"],
-.library-form input[type="datetime"],
-.library-form input[type="datetime-local"],
-.library-form input[type="week"],
-.library-form input[type="number"],
-.library-form input[type="search"],
-.library-form input[type="tel"],
-.library-form input[type="color"],
+.library-form input,
 .library-form select, .library-form textarea {
     padding: 0.5em 0.6em;
     display: inline-block;
@@ -43,8 +30,8 @@
     box-sizing: border-box;
 }
 
-.library-form .pure-group input,
-.library-form .pure-group textarea {
+.library-form .library-group input,
+.library-form .library-group textarea {
     display: block;
     padding: 10px;
     margin: 0 0 -1px;
@@ -53,19 +40,23 @@
     top: -1px;
 }
 
-.library-form .pure-input-half {
+.library-form .library-input-half {
     width: 50%;
 }
 
-.library-form .pure-group input:last-child,
-.library-form .pure-group textarea:last-child {
+.library-form .library-input-third {
+    width: 33%;
+}
+
+.library-form .library-group input:last-child,
+.library-form .library-group textarea:last-child {
     top: -2px;
     border-radius: 0 0 4px 4px;
     margin: 0;
 }
 
-.library-form .pure-group input,
-.library-form .pure-group textarea {
+.library-form .library-group input,
+.library-form .library-group textarea {
     display: block;
     padding: 10px;
     margin: 0 0 -1px;
