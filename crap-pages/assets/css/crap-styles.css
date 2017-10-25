@@ -50,7 +50,8 @@ body {
     max-width: 600px;
     overflow-x: hidden;
     overflow-y: scroll;
-    background: url('http://lorempixel.com/600/200/animals') scroll;
+    background: url('http://blog.karmimypsiaki.pl/wp-content/uploads/2016/01/IMG_3398a.jpg') scroll;
+    background-size: cover;
 }
 
 .static-background-container__expander {
