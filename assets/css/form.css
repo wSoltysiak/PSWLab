@@ -1,0 +1,75 @@
+.library-form fieldset {
+    margin: 0;
+    padding: 0.35em 0 0.75em;
+    border: 0;
+}
+
+.library-form legend {
+    display: block;
+    width: 100%;
+    padding: 0.3em 0;
+    margin-bottom: 0.3em;
+    color: #333;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.library-form select {
+    height: 2.25em;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.library-form input[type="text"],
+.library-form input[type="password"],
+.library-form input[type="email"],
+.library-form input[type="url"],
+.library-form input[type="date"],
+.library-form input[type="month"],
+.library-form input[type="time"],
+.library-form input[type="datetime"],
+.library-form input[type="datetime-local"],
+.library-form input[type="week"],
+.library-form input[type="number"],
+.library-form input[type="search"],
+.library-form input[type="tel"],
+.library-form input[type="color"],
+.library-form select, .library-form textarea {
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+.library-form .pure-group input,
+.library-form .pure-group textarea {
+    display: block;
+    padding: 10px;
+    margin: 0 0 -1px;
+    border-radius: 0;
+    position: relative;
+    top: -1px;
+}
+
+.library-form .pure-input-half {
+    width: 50%;
+}
+
+.library-form .pure-group input:last-child,
+.library-form .pure-group textarea:last-child {
+    top: -2px;
+    border-radius: 0 0 4px 4px;
+    margin: 0;
+}
+
+.library-form .pure-group input,
+.library-form .pure-group textarea {
+    display: block;
+    padding: 10px;
+    margin: 0 0 -1px;
+    border-radius: 0;
+    position: relative;
+    top: -1px;
+}
