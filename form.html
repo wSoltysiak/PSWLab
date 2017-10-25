@@ -15,6 +15,14 @@
     <link rel="stylesheet" type="text/css" href="assets/css/button.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main-footer.css">
     <title>Biblioteka miejska - zapisy zajęciowe</title>
+<!--    Style wbudowane w html-->
+    <style>
+        #book-name{
+            font-family: monospace;
+            font-size: 1.5em;
+        }
+    </style>
+<!--    Koniec styli-->
 </head>
 <body>
 <header class="welcome-header">
@@ -82,7 +90,7 @@
     </h2>
     <form class="library-form" action="form-next.html" method="POST">
         <fieldset class="library-form-aligned">
-            <legend>Przedstaw się</legend>
+            <legend style="font-family: fantasy">Przedstaw się</legend>
             <div class="library-control-group">
                 <input class="library-input-third"
                        type="text"
@@ -164,7 +172,7 @@
 
         <fieldset class="library-group">
             <legend>Opisz swoją ulubioną książkę</legend>
-            <input class="library-input-half"
+            <input id="book-name" class="library-input-half"
                    type="text"
                    placeholder="Tytuł książki">
             <textarea class="library-input-half"
