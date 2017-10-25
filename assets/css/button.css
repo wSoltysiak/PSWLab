@@ -1,7 +1,6 @@
 .library-button {
     /* Struktura */
     display: inline-block;
-    zoom: 1;
     line-height: normal;
     white-space: nowrap;
     vertical-align: middle;
@@ -11,7 +10,6 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
     box-sizing: border-box;
     /* Wygląd */
     font-family: inherit;
@@ -48,7 +46,6 @@
     opacity: 0.40;
     cursor: not-allowed;
     box-shadow: none;
-    pointer-events: none;
 }
 
 /* Firefox: Get rid of the inner focus border */
@@ -72,5 +69,5 @@
 
 .library-button:active {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.20) inset;
-    border-color: #000 \9;
+    border-color: #000;
 }
