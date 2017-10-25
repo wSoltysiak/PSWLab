@@ -2,8 +2,9 @@
     border-collapse: collapse;
     border-spacing: 0;
     empty-cells: show;
-    border: 1px solid #cbcbcb;
+    border: 1px solid;
     width: 100%;
+    border-color: #cbcbcb;
 
 }
 
@@ -19,7 +20,8 @@
 }
 
 .library-table td, .library-table th {
-    border-left: 1px solid #cbcbcb;
+    border-left: 1px solid;
+    border-color: #f1f1f1;
     border-width: 0 0 0 1px;
     font-size: inherit;
     margin: 0;
