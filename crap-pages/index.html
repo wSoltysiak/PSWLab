@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Strona z regułami CSS">
+    <meta name="keywords"
+          content="CSS, Pokaz">
+    <meta name="author" content="Jakub Nadolny, Wojciech Sołtysiak">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/crap-styles.css">
+    <title>Losowe reguły CSS</title>
+</head>
+<body>
+<div id="header-container">
+    <div class="header-container__text">Strona do testów CSS</div>
+    <div class="header-container__text header-container__text--medium header-container__text--small-caps">Średni tekst z small caps</div>
+    <div class="header-container__text header-container__text--small header-container__text--italic">Mniejszy tekst napisany kursywą</div>
+</div>
+<div class="main-container">
+    <h1>background-attachment:</h1>
+    <div class="static-background-container">
+        <div class="static-background-container__expander"></div>
+    </div>
+</div>
+<div class="positioning-presentation-container">
+    <div class="positioning-presentation-static">
+            To jest box statyczny.
+    </div>
+    <div class="positioning-presentation-relative">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Testudo_hermanni_hermanni3.jpg" style="width: 100px" alt="img1" />
+        <img style="width: 100px; clear:left; float:left;" src="http://i2.pinger.pl/pgr306/d9061bca002822a44f5ba3ea/kenya_2808.jpg" alt="img2" />
+            To jest box relatywny. Za wikipedią - "Relatywizm – pogląd filozoficzny, wedle którego prawdziwość wypowiedzi można oceniać wyłącznie w kontekście systemu, w którym są one wypowiadane. Tym samym relatywizm stwierdza, że nie istnieją zdania niosące absolutną treść, których ocena byłaby identyczna i niezależna od jej kontekstu. Prawdziwość dowolnego sądu zależy od przyjętych założeń, poglądów czy podstaw kulturowych."
+    </div>
+    <div class="positioning-presentation-absolute">
+            To jest box z pozycją absolutną.
+    </div>
+</div>
+<div class="positioning-presentation-fixed">
+    Ten box jest z pozycją "fixed"
+</div>
+</body>
+</html>

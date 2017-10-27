@@ -10,20 +10,62 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/welcome-header.css">
     <link rel="stylesheet" type="text/css" href="assets/css/info-section.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/forms.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/form.css">
     <link rel="stylesheet" type="text/css" href="assets/css/buttons.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main-footer.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/dropdown-menu.css">
     <title>Biblioteka miejska - zapisy zajęciowe</title>
 </head>
 <body>
 <header class="welcome-header">
-    <nav class="welcome-header__menu">
-        <a href="index.html">Strona główna</a>
-        <a href="gallery.html">Galeria</a>
-        <a href="team.html">Pracownicy</a>
-        <a href="form.html"><b>Zajęcia biblioteczne</b></a>
-        <a href="mailto:bibl@zlotow.pl">Kontakt</a>
-        <a href="http://www.gminazlotow.pl/">Gmina Złotów</a>
+    <nav class="dropdown-menu">
+        <ul class="dropdown-menu__first-level">
+            <li id="category1">Kategoria 1
+                <ul id="category1__submenu" class="dropdown-menu__box dropdown-menu__box--submenu">
+                    <li>Podkategoria 1</li>
+                    <li>Podkategoria 2</li>
+                    <li id="subcategory1">Podkategoria 3
+                        <ul id="subcategory1__submenu" class="dropdown-menu__box dropdown-menu__box--subsubmenu">
+                            <li>Podkategoria 1</li>
+                            <li>Podkategoria 2</li>
+                            <li>Podkategoria 3</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="category2">Kategoria 2
+                <ul id="category2__submenu" class="dropdown-menu__box dropdown-menu__box--submenu">
+                    <li>Podkategoria 1</li>
+                    <li>Podkategoria 2</li>
+                    <li id="subcategory2">Podkategoria 3
+                        <ul id="subcategory2__submenu" class="dropdown-menu__box dropdown-menu__box--subsubmenu">
+                            <li>Podkategoria 1</li>
+                            <li>Podkategoria 2</li>
+                            <li>Podkategoria 3</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="category3">Kategoria 3
+                <ul id="category3__submenu" class="dropdown-menu__box dropdown-menu__box--submenu">
+                    <li>Podkategoria 1</li>
+                    <li id="subcategory3">Podkategoria 2
+                        <ul id="subcategory3__submenu" class="dropdown-menu__box dropdown-menu__box--subsubmenu">
+                            <li>Podkategoria 1</li>
+                            <li>Podkategoria 2</li>
+                            <li>Podkategoria 3</li>
+                        </ul>
+                    </li>
+                    <li>Podkategoria 3</li>
+                </ul>
+            </li>
+            <li><a href="index.html"><b>Strona główna</b></a></li>
+            <li><a href="gallery.html">Galeria</a></li>
+            <li><a href="team.html">Pracownicy</a></li>
+            <li><a href="form.html">Zajęcia biblioteczne</a></li>
+            <li><a href="mailto:bibl@zlotow.pl">Kontakt</a></li>
+            <li><a href="http://www.gminazlotow.pl/">Gmina Złotów</a></li>
+        </ul>
     </nav>
     <div class="welcome-header__container">
         <h1 class="welcome-header__header">
@@ -38,23 +80,23 @@
     <h2 class="info-section__header">
         Formularz zapisu do zajęć bibliotecznych - cz. 2
     </h2>
-    <form class="pure-form">
+    <form class="library-form">
         <fieldset>
             <legend>Wybierz grupę do ktorej należą twoi znajomi</legend>
-            <input type="search" placeholder="Wyszukaj grupę...">
+            <input class="library-input-half" type="search" placeholder="Wyszukaj grupę...">
         </fieldset>
 
-        <fieldset class="pure-form-aligned">
+        <fieldset class="library-form-aligned">
             <legend>Wybierz kolor grupy do ktorej chcesz należeć</legend>
             <input type="color">
         </fieldset>
 
         <fieldset>
             <legend>Jeśli masz bloga wpisz tutaj jego adres</legend>
-            <input type="url" placeholder="www.adres-bloga.com">
+            <input class="library-input-half"  type="url" placeholder="www.adres-bloga.com">
         </fieldset>
 
-        <fieldset class="pure-group">
+        <fieldset class="library-group">
             <legend>Jak oceniasz naszą bibliotekę?</legend>
             <div class="info-section__text-block--inline">
                 0 <input min="0" max="10" type="range"> 10
@@ -63,7 +105,7 @@
 
         <fieldset>
             <legend>Od jakiego miesiące chesz zacząć?</legend>
-            <input type="month">
+            <input class="library-input-half"  type="month">
         </fieldset>
 
         <fieldset>

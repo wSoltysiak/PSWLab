@@ -10,20 +10,70 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/welcome-header.css">
     <link rel="stylesheet" type="text/css" href="assets/css/info-section.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/forms.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/buttons.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/dropdown-menu.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/form.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/button.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main-footer.css">
     <title>Biblioteka miejska - zapisy zajęciowe</title>
+<!--    Style wbudowane w html-->
+    <style>
+        #book-name{
+            font-family: monospace;
+            font-size: 1.5em;
+        }
+    </style>
+<!--    Koniec styli-->
 </head>
 <body>
 <header class="welcome-header">
-    <nav class="welcome-header__menu">
-        <a href="index.html">Strona główna</a>
-        <a href="gallery.html">Galeria</a>
-        <a href="team.html">Pracownicy</a>
-        <a href="form.html"><b>Zajęcia biblioteczne</b></a>
-        <a href="mailto:bibl@zlotow.pl">Kontakt</a>
-        <a href="http://www.gminazlotow.pl/">Gmina Złotów</a>
+    <nav class="dropdown-menu">
+        <ul class="dropdown-menu__first-level">
+            <li id="category1">Kategoria 1
+                <ul id="category1__submenu" class="dropdown-menu__box dropdown-menu__box--submenu">
+                    <li>Podkategoria 1</li>
+                    <li>Podkategoria 2</li>
+                    <li id="subcategory1">Podkategoria 3
+                        <ul id="subcategory1__submenu" class="dropdown-menu__box dropdown-menu__box--subsubmenu">
+                            <li>Podkategoria 1</li>
+                            <li>Podkategoria 2</li>
+                            <li>Podkategoria 3</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="category2">Kategoria 2
+                <ul id="category2__submenu" class="dropdown-menu__box dropdown-menu__box--submenu">
+                    <li>Podkategoria 1</li>
+                    <li>Podkategoria 2</li>
+                    <li id="subcategory2">Podkategoria 3
+                        <ul id="subcategory2__submenu" class="dropdown-menu__box dropdown-menu__box--subsubmenu">
+                            <li>Podkategoria 1</li>
+                            <li>Podkategoria 2</li>
+                            <li>Podkategoria 3</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="category3">Kategoria 3
+                <ul id="category3__submenu" class="dropdown-menu__box dropdown-menu__box--submenu">
+                    <li>Podkategoria 1</li>
+                    <li id="subcategory3">Podkategoria 2
+                        <ul id="subcategory3__submenu" class="dropdown-menu__box dropdown-menu__box--subsubmenu">
+                            <li>Podkategoria 1</li>
+                            <li>Podkategoria 2</li>
+                            <li>Podkategoria 3</li>
+                        </ul>
+                    </li>
+                    <li>Podkategoria 3</li>
+                </ul>
+            </li>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="gallery.html">Galeria</a></li>
+            <li><a href="team.html">Pracownicy</a></li>
+            <li><a href="form.html"><b>Zajęcia biblioteczne</b></a></li>
+            <li><a href="mailto:bibl@zlotow.pl">Kontakt</a></li>
+            <li><a href="http://www.gminazlotow.pl/">Gmina Złotów</a></li>
+        </ul>
     </nav>
     <div class="welcome-header__container">
         <h1 class="welcome-header__header">
@@ -38,31 +88,31 @@
     <h2 class="info-section__header">
         Formularz zapisu do zajęć bibliotecznych - cz. 1
     </h2>
-    <form class="pure-form" action="form-next.html" method="POST">
-        <fieldset class="pure-form-aligned">
-            <legend>Przedstaw się</legend>
-            <div class="pure-control-group">
-                <input class="pure-input-1-3"
+    <form class="library-form" action="form-next.html" method="POST">
+        <fieldset class="library-form-aligned">
+            <legend style="font-family: fantasy">Przedstaw się</legend>
+            <div class="library-control-group">
+                <input class="library-input-third"
                        type="text"
                        name="firstname"
                        id="firstname"
                        placeholder="Imię"
                        autocomplete="on"
                        autofocus>
-                <label class="pure-form-message-inline" for="firstname">Wpisz swoje imię.</label>
+                <label class="library-form-message-inline" for="firstname">Wpisz swoje imię.</label>
             </div>
-            <div class="pure-control-group">
-                <input class="pure-input-1-3"
+            <div class="library-control-group">
+                <input class="library-input-third"
                        type="text"
                        id="lastname"
                        name="lastname"
                        placeholder="Nazwisko"
                        autocomplete="on"
                        required>
-                <label class="pure-form-message-inline" for="lastname">Wpisz swoje nazwisko.</label>
+                <label class="library-form-message-inline" for="lastname">Wpisz swoje nazwisko.</label>
             </div>
-            <div class="pure-control-group">
-                <input class="pure-input-1-3"
+            <div class="library-control-group">
+                <input class="library-input-third"
                        id="months-visible"
                        list="months"
                        placeholder="Miesiąc">
@@ -80,27 +130,27 @@
                     <option value="Listopad">
                     <option value="Grudzień">
                 </datalist>
-                <label class="pure-form-message-inline" for="months-visible">Wpisz swoj miesiąc urodzenia.</label>
+                <label class="library-form-message-inline" for="months-visible">Wpisz swoj miesiąc urodzenia.</label>
             </div>
-            <div class="pure-control-group">
-                <input class="pure-input-1-3"
+            <div class="library-control-group">
+                <input class="library-input-third"
                        type="email"
                        id="email"
                        name="email"
                        placeholder="Adres email"
                        autocomplete="on"
                        required>
-                <label class="pure-form-message-inline" for="email">Wpisz swoj email. Należy użyć znaku @.</label>
+                <label class="library-form-message-inline" for="email">Wpisz swoj email. Należy użyć znaku @.</label>
             </div>
-            <div class="pure-control-group">
-                <input class="pure-input-1-3"
+            <div class="library-control-group">
+                <input class="library-input-third"
                        type="tel"
                        id="tel"
                        name="tel"
                        placeholder="999 999 999"
                        autocomplete="on"
                        pattern="\d{3}[\s]\d{3}[\s]\d{3}">
-                <label class="pure-form-message-inline" for="tel">Wpisz swoj numer telefonu. Tylko cyfry.</label>
+                <label class="library-form-message-inline" for="tel">Wpisz swoj numer telefonu. Tylko cyfry.</label>
             </div>
         </fieldset>
 
@@ -120,12 +170,12 @@
             </select>
         </fieldset>
 
-        <fieldset class="pure-group">
+        <fieldset class="library-group">
             <legend>Opisz swoją ulubioną książkę</legend>
-            <input class="pure-input-1-2"
+            <input id="book-name" class="library-input-half"
                    type="text"
                    placeholder="Tytuł książki">
-            <textarea class="pure-input-1-2"
+            <textarea class="library-input-half"
                       maxlength="200"
                       placeholder="Co Ci sie w niej podobało?"></textarea>
         </fieldset>
@@ -142,8 +192,8 @@
             <br><input id="newsletter" type="checkbox"> Chcę otrzymywać emaile z materiałami zajęciowymi.
         </fieldset>
         <fieldset>
-            <input class="pure-button pure-button-primary button-error" type="reset">
-            <input class="pure-button pure-button-primary" type="submit">
+            <input class="library-button library-button-primary library-button-red" type="reset">
+            <input class="library-button library-button-primary" type="submit">
         </fieldset>
     </form>
 </section>
