@@ -39,6 +39,12 @@ body {
     text-shadow: 5px 3px #333333;
 }
 
+.header-container__text--spinned {
+    animation: 2s spin;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 .main-container {
     width: 100%;
     display: flex;
@@ -105,4 +111,14 @@ body {
     height: 40px;
     background: aquamarine;
     position: fixed;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
