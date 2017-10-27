@@ -35,6 +35,10 @@ body {
     font-style: italic;
 }
 
+.header-container__text--with-shadow {
+    text-shadow: 5px 3px #333333;
+}
+
 .main-container {
     width: 100%;
     display: flex;
