@@ -5,6 +5,12 @@
     padding: 0 10px;
 }
 
+.info-section--bordered {
+    border: 6px solid #000000;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
 .info-section__header {
     font-size: 28px;
     margin: 20px 0 20px 0;
