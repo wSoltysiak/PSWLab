@@ -9,8 +9,19 @@
 }
 
 .dropdown-menu ul {
+    animation: 0.4s show;
     list-style: none;
     padding: 0;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .dropdown-menu a {
