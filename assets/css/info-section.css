@@ -12,6 +12,18 @@
     column-rule: 6px outset #000000;
 }
 
+@media screen and (max-width: 780px) {
+    .info-section--columned {
+        columns: 2;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .info-section--columned {
+        columns: 1;
+    }
+}
+
 .info-section--bordered {
     border: 6px solid #000000;
     border-radius: 10px;
