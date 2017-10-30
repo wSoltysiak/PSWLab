@@ -145,8 +145,6 @@ body {
     height: 100%;
     padding:1px;
     
-    background: -moz-radial-gradient(center, ellipse cover, rgba(13,77,130,1) 1%, rgba(45,103,150,1) 33%, rgba(64,138,178,1) 41%, rgba(0,0,0,1) 43%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(13,77,130,1) 1%,rgba(45,103,150,1) 33%,rgba(64,138,178,1) 41%,rgba(0,0,0,1) 43%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: radial-gradient(ellipse at center, rgba(13,77,130,1) 1%,rgba(45,103,150,1) 33%,rgba(64,138,178,1) 41%,rgba(0,0,0,1) 43%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     
     transition: transform 2s;
