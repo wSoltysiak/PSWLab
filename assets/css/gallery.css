@@ -3,7 +3,9 @@
     width: 640px;
     height: 480px;
     justify-content: space-between;
-    transition: opacity .1s linear;
+    transition: opacity .2s linear;
+    border: 1px solid #555555;
+    box-shadow: 0 6px 10px rgba(0,0,0, 0.3);
 }
 
 .gallery__navigation-bar {

@@ -4,6 +4,7 @@ class Gallery {
         this.pictures = this.getPictures();
         this.start = 0;
         this.end = this.pictures.length - 1;
+        this.intervalId = this.runAutoGallery();
 
         this.attachImage(this.start);
         this.attachNavigation();
@@ -24,7 +25,16 @@ class Gallery {
         container.style.background = 'url(' + this.pictures[position] + ')';
         container.style.backgroundSize = 'cover';
         container.style.opacity = '0.6';
-        setTimeout(() => container.style.opacity = '1', 200);
+        setTimeout(() => container.style.opacity = '1', 600);
+    }
+
+    runAutoGallery() {
+        return setInterval(this.moveToNext.bind(this), 10000);
+    }
+
+    clearAutoStep() {
+        clearInterval(this.intervalId);
+        this.intervalId = this.runAutoGallery();
     }
 
     moveToNext() {
@@ -38,8 +48,14 @@ class Gallery {
     }
 
     attachNavigation() {
-        document.querySelector('#left').addEventListener('click', this.moveToNext.bind(this));
-        document.querySelector('#right').addEventListener('click', this.moveToPrevious.bind(this));
+        document.querySelector('#left').addEventListener('click', () => {
+            this.clearAutoStep();
+            this.moveToNext();
+        });
+        document.querySelector('#right').addEventListener('click', () => {
+            this.clearAutoStep();
+            this.moveToPrevious();
+        });
     }
 }
 
