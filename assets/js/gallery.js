@@ -7,7 +7,7 @@
     const min = 0;
 
     attachImage();
-    attachNaviagtion();
+    attachNavigation();
 
     function isImgNode(element) {
         return element.nodeName.toLowerCase() === 'img';
@@ -29,8 +29,8 @@
         attachImage();
     }
 
-    function attachNaviagtion() {
+    function attachNavigation() {
         document.querySelector('#left').addEventListener('click', moveToNext);
-        document.querySelector('#right').addEventListener('click', moveToNext);
+        document.querySelector('#right').addEventListener('click', moveToPrevious);
     }
 })();
