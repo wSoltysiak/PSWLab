@@ -1,36 +1,42 @@
-(function() {
-    let position = 0;
-    const pictures = Array.from(document.querySelector('#images-list').childNodes)
-        .filter(isImgNode)
-        .map(img => img.src);
-    const max = pictures.length - 1;
-    const min = 0;
+class Gallery {
+    constructor() {
+        this.position = 0;
+        this.pictures = Array.from(document.querySelector('#images-list').childNodes)
+            .filter(this.isImgNode)
+            .map(img => img.src);
+        this.max = this.pictures.length - 1;
+        this.min = 0;
 
-    attachImage();
-    attachNavigation();
+        this.attachImage();
+        this.attachNavigation();
+    }
 
-    function isImgNode(element) {
+    isImgNode(element) {
         return element.nodeName.toLowerCase() === 'img';
     }
 
-    function attachImage() {
+    attachImage() {
         const container = document.querySelector('#image-container');
-        container.style.background = 'url(' + pictures[position] + ')';
+        container.style.background = 'url(' + this.pictures[this.position] + ')';
         container.style.backgroundSize = 'cover';
     }
 
-    function moveToNext() {
-        position = position === max ? 0 : position + 1;
-        attachImage();
+    moveToNext() {
+        this.position = this.position === this.max ? 0 : this.position + 1;
+        this.attachImage();
     }
 
-    function moveToPrevious() {
-        position = position === min ? max : position - 1;
-        attachImage();
+    moveToPrevious() {
+        this.position = this.position === this.min ? this.max : this.position - 1;
+        this.attachImage();
     }
 
-    function attachNavigation() {
-        document.querySelector('#left').addEventListener('click', moveToNext);
-        document.querySelector('#right').addEventListener('click', moveToPrevious);
+    attachNavigation() {
+        document.querySelector('#left').addEventListener('click', this.moveToNext.bind(this));
+        document.querySelector('#right').addEventListener('click', this.moveToPrevious.bind(this));
     }
+}
+
+(function() {
+    let gallery = new Gallery();
 })();
