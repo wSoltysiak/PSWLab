@@ -23,6 +23,8 @@ class Gallery {
         const container = document.querySelector('#image-container');
         container.style.background = 'url(' + this.pictures[position] + ')';
         container.style.backgroundSize = 'cover';
+        container.style.opacity = '0.6';
+        setTimeout(() => container.style.opacity = '1', 200);
     }
 
     moveToNext() {

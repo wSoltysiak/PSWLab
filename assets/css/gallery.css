@@ -3,6 +3,7 @@
     width: 640px;
     height: 480px;
     justify-content: space-between;
+    transition: opacity .1s linear;
 }
 
 .gallery__navigation-bar {
