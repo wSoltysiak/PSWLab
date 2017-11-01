@@ -1,0 +1,16 @@
+.gallery__image-container {
+    display: flex;
+    width: 640px;
+    height: 480px;
+    justify-content: space-between;
+}
+
+.gallery__navigation-bar {
+    background: rgba(0,0,0,0.2);
+    width: 50px;
+    height: 100%;
+}
+
+.gallery__hidden-content {
+    display: none;
+}
