@@ -2,6 +2,7 @@ class Gallery {
     constructor() {
         this.position = 0;
         this.pictures = this.getPictures();
+        this.container = document.querySelector('#image-container');
         this.start = 0;
         this.end = this.pictures.length - 1;
         this.intervalId = this.runAutoGallery();
@@ -21,11 +22,24 @@ class Gallery {
     }
 
     attachImage(position) {
-        const container = document.querySelector('#image-container');
-        container.style.background = 'url(' + this.pictures[position] + ')';
-        container.style.backgroundSize = 'cover';
-        container.style.opacity = '0.6';
-        setTimeout(() => container.style.opacity = '1', 600);
+        this.container.style.background = 'url(' + this.pictures[position] + ')';
+        this.container.style.backgroundSize = 'cover';
+    }
+
+    makeTransition() {
+        this.container.style.opacity = '0.6';
+        setTimeout(() => this.container.style.opacity = '1', 600);
+    }
+
+    attachNavigation() {
+        document.querySelector('#left').addEventListener('click', () => {
+            this.clearAutoStep();
+            this.moveToNext();
+        });
+        document.querySelector('#right').addEventListener('click', () => {
+            this.clearAutoStep();
+            this.moveToPrevious();
+        });
     }
 
     runAutoGallery() {
@@ -40,22 +54,13 @@ class Gallery {
     moveToNext() {
         this.position = this.position === this.end ? 0 : this.position + 1;
         this.attachImage(this.position);
+        this.makeTransition();
     }
 
     moveToPrevious() {
         this.position = this.position === this.start ? this.end : this.position - 1;
         this.attachImage(this.position);
-    }
-
-    attachNavigation() {
-        document.querySelector('#left').addEventListener('click', () => {
-            this.clearAutoStep();
-            this.moveToNext();
-        });
-        document.querySelector('#right').addEventListener('click', () => {
-            this.clearAutoStep();
-            this.moveToPrevious();
-        });
+        this.makeTransition();
     }
 }
 
