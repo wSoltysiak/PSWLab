@@ -1,34 +1,38 @@
 class Gallery {
     constructor() {
         this.position = 0;
-        this.pictures = Array.from(document.querySelector('#images-list').childNodes)
+        this.pictures = this.getPictures();
+        this.start = 0;
+        this.end = this.pictures.length - 1;
+
+        this.attachImage(this.start);
+        this.attachNavigation();
+    }
+
+    getPictures() {
+        return Array.from(document.querySelector('#images-list').childNodes)
             .filter(this.isImgNode)
             .map(img => img.src);
-        this.max = this.pictures.length - 1;
-        this.min = 0;
-
-        this.attachImage();
-        this.attachNavigation();
     }
 
     isImgNode(element) {
         return element.nodeName.toLowerCase() === 'img';
     }
 
-    attachImage() {
+    attachImage(position) {
         const container = document.querySelector('#image-container');
-        container.style.background = 'url(' + this.pictures[this.position] + ')';
+        container.style.background = 'url(' + this.pictures[position] + ')';
         container.style.backgroundSize = 'cover';
     }
 
     moveToNext() {
-        this.position = this.position === this.max ? 0 : this.position + 1;
-        this.attachImage();
+        this.position = this.position === this.end ? 0 : this.position + 1;
+        this.attachImage(this.position);
     }
 
     moveToPrevious() {
-        this.position = this.position === this.min ? this.max : this.position - 1;
-        this.attachImage();
+        this.position = this.position === this.start ? this.end : this.position - 1;
+        this.attachImage(this.position);
     }
 
     attachNavigation() {
@@ -38,5 +42,5 @@ class Gallery {
 }
 
 (function() {
-    let gallery = new Gallery();
+    new Gallery();
 })();
