@@ -1,3 +1,5 @@
+var zmienna = 0;
+
 function niesamowitaFunkcja() {
     var tekst = window.prompt("Dostąpił cię zaszczyt ujrzenia tego niezwykłego okienka. Napisz jak bardzo się cieszysz!");
     tekst += " ~ <small>Ktoś wspaniały</small>";
@@ -26,8 +28,17 @@ function losujMagiczneZaklęcia() {
     return totalTag;
 }
 
+function gorgeusCalculator() {
+    var dodajnik = parseInt(document.getElementById("dodajnik").value);
+    var dodatnia = parseFloat(document.getElementById("dodatnia").value);
+
+    alert("Twój wspaniały wynik to : " + (dodajnik + dodatnia + 0.73) + ".Dodałem jeszcze 0.73, żebyś twój wspaniały wynik był większy.");
+}
+
 document.getElementsByClassName("lovely-quotes")[0].style.display = "none";
 window.addEventListener("load", przepięknyAlert);
 document.getElementById("magic-area").innerHTML = "<span class='magical-bar'>Zabiorę cię w świat magii - świat javascriptu</span>" + losujMagiczneZaklęcia();
 document.getElementById("guziczunio").addEventListener("click", niesamowitaFunkcja);
 document.write("<h2>Dziękuję że mogłem być dziś twym internetowym przewodnikiem.</h2>");
+
+document.getElementById("count-this-beautifull-numbers").addEventListener("click", gorgeusCalculator)

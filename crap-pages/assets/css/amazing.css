@@ -56,3 +56,11 @@ body{
     font-style: italic;
     color:white;
 }
+
+.avesome-math{
+    width:100%;
+    padding:35px 0;
+
+    color:white;
+    background-color: cadetblue;
+}
