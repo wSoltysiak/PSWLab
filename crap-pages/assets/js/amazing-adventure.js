@@ -1,10 +1,13 @@
 
 function niesamowitaFunkcja(){
-    window.prompt("Dostąpił cię zaszczyt ujrzenia tego niezwykłego okienka. Napisz jak bardzo się cieszysz!")
+    var tekst = window.prompt("Dostąpił cię zaszczyt ujrzenia tego niezwykłego okienka. Napisz jak bardzo się cieszysz!");
+    tekst += " ~ <small>Ktoś wspaniały</small>"
+    var places = document.getElementsByClassName("lovely-quotes")[0].innerHTML = tekst;
+    document.getElementsByClassName("lovely-quotes")[0].style.display = "block";
 }
 
 function przepięknyAlert(){
-    window.alert("Oh, jakże twe okno teraz jest dostojne!")
+    window.alert("Oh, jakże twe okno jest dostojne! Zostań i podziwiaj je jak najdłużej wędrowcze.")
 }
 
 function losujMagiczneZaklęcia(){
@@ -24,9 +27,13 @@ function losujMagiczneZaklęcia(){
     return totalTag;
 }
 
-document.write("<span class='magical-bar'>Zabiorę cię w świat magii - świat javascriptu</span>");
-document.write(losujMagiczneZaklęcia());
+document.getElementsByClassName("lovely-quotes")[0].style.display = "none";
+
+window.addEventListener("load", przepięknyAlert);
+
+document.getElementById("magic-area").innerHTML = "<span class='magical-bar'>Zabiorę cię w świat magii - świat javascriptu</span>" + losujMagiczneZaklęcia();
 
 
 document.getElementById("guziczunio").addEventListener("click", niesamowitaFunkcja);
-window.addEventListener("resize", przepięknyAlert);
+
+document.writeln("<h2>Dziękuję że mogłem być dziś twym internetowym przewodnikiem.</h2>")

@@ -38,3 +38,21 @@ body{
     margin-top:110px;
     box-shadow: 0px 2px 7px rgba(0,0,0, 0.5);
 }
+
+#magic-area{
+    background-color: #444444;
+    padding-top:50px;
+    padding-bottom: 50px;
+    width: 100%;
+}
+
+.lovely-quotes{
+    width:100%;
+    background-color: palevioletred;
+
+    padding-top:40px;
+    padding-bottom:40px;
+
+    font-style: italic;
+    color:white;
+}
