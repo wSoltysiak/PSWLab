@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/info-section.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main-footer.css">
     <link rel="stylesheet" type="text/css" href="assets/css/dropdown-menu.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/gallery.css">
+    <script src="https://use.fontawesome.com/70f13924e9.js"></script>
     <title>Biblioteka miejska - galeria</title>
 </head>
 <body>
@@ -75,18 +77,31 @@
         </h2>
     </div>
 </header>
-<section class="info-section info-section--bordered">
+<section class="info-section info-section">
     <h2 class="info-section__header">
         Zdjęcia z naszej biblioteki
     </h2>
+    <div id="image-container" class="gallery__image-container">
+        <div id="left" class="gallery__navigation-bar">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </div>
+        <div id="right" class="gallery__navigation-bar">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </div>
+    </div>
 
-    <img src="assets/img/photo1.jpg" alt="Książki oświetlone żarowkami" />
-    <img src="assets/img/photo2.jpg" width="700" alt="Zbliżenie na książki" />
-    <img src="assets/img/photo3.jpg" width="700" height="950" alt="Książki poukładanie na połkach" />
-    <img src="assets/img/photo4.jpg" alt="Czytelnia w bibliotece" />
+    <div id="images-list" class="gallery__hidden-content">
+        <img src="assets/img/photo1.jpg" alt="1" />
+        <img src="assets/img/photo2.jpg" alt="2" />
+        <img src="assets/img/photo3.jpg" alt="3" />
+        <img src="assets/img/photo4.jpg" alt="4" />
+    </div>
+
 </section>
 <footer class="main-footer">
     <span class="main-footer__text">&copy; Biblioteka miejska w Złotowie - 2017</span>
 </footer>
+
+<script src="./assets/js/gallery.js"></script>
 </body>
 </html>
