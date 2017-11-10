@@ -3,5 +3,9 @@
 - [x] HTML_2
 - [x] CSS_1
 - [x] CSS_2
-- [ ] JS
+- [x] JS
 - [ ] DOM
+- [ ] XAMPP & ASP.NET
+- [ ] PHP_1
+- [ ] PHP_2
+- [ ] PHP_3
