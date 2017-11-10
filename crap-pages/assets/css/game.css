@@ -35,3 +35,7 @@ h1, h2 {
 .game-field__tile--cup {
     background: url('../img/cup.png');
 }
+
+.game-field__tile--player {
+    background: url('../img/player.png');
+}
