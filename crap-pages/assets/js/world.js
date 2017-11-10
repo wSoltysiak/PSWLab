@@ -17,6 +17,7 @@ class World {
     }
 
     render() {
+        this.clear();
         const gameField = document.querySelector('#game-field');
         this.tiles.forEach(tiles => tiles.forEach(tileType => {
             let tile = document.createElement('div');
@@ -24,5 +25,11 @@ class World {
             tile.classList.add(tileType);
             gameField.appendChild(tile);
         }));
+    }
+
+    clear() {
+        const gameField = document.querySelector('#game-field');
+        const tiles = gameField.children;
+        Array.from(tiles).forEach(tile => gameField.removeChild(tile));
     }
 }
