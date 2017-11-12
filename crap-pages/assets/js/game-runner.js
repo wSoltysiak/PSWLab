@@ -1,22 +1,38 @@
 (function() {
     const gameField = document.querySelector('#game-field');
-    gameField.focus();
+    const worldWidth  = 8;
+    const worldHeight = 5;
 
     const player = new Player();
-    const world = new World(8, 5);
+    const world = new World(worldWidth, worldHeight);
+    const renderElements = [world, player];
 
-    world.generate();
-    world.render();
-    player.render();
+    function startGame() {
+        world.generate();
+        render();
+        gameField.focus();
+        gameField.onkeypress = gameLoop;
+    }
 
-    gameField.onkeypress = event => {
+    function render() {
+        renderElements.forEach(element => element.render());
+    }
+
+    function gameLoop(event) {
         player.move(event.keyCode);
-        world.render();
-        player.render();
-
-        console.log(world.isCup(player.x, player.y));
-        if (world.isCup(player.x, player.y)) {
-            alert('Brawo! Udało się!');
+        render();
+        if (isEndOfGame()) {
+            showSuccessAlert();
         }
     }
+
+    function isEndOfGame() {
+        return world.isCup(player.x, player.y);
+    }
+
+    function showSuccessAlert() {
+        alert('Brawo! Udało się!');
+    }
+
+    startGame();
 })();
