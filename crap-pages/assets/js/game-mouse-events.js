@@ -1,6 +1,11 @@
 (function() {
     const gameField = document.querySelector('#game-field');
 
+    // gameField.onclick = event => {
+    //     console.log(event.clientX, event.clientY);
+    //     console.log(event.screenX, event.screenY);
+    // };
+
     gameField.onmouseover = addShadow;
     gameField.onmouseout = removeShadow;
 

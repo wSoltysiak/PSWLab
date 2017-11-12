@@ -28,6 +28,11 @@ class World {
         let tileElement = document.createElement('div');
         tileElement.classList.add('game-field__tile');
         tileElement.classList.add(tile);
+        if (tile === TileTypes.cup) {
+            tileElement.onmousedown = () => {
+                alert('Oto on. Jedyny taki puchar na całym świecie. Jego zdobycie dla wielu jest niemożliwe. Czy Ty tego dokonasz?');
+            }
+        }
         gameField.appendChild(tileElement);
     }
 
