@@ -31,11 +31,10 @@ class Player {
 
     render() {
         const gameField = document.querySelector('#game-field');
-        const toDelete = document.querySelector('#game-field').children[this.x + this.y * 8];
+        const toDelete = document.querySelector('#game-field').children[this.x * 5 + this.y];
         let tile = document.createElement('div');
         tile.classList.add('game-field__tile');
         tile.classList.add(TileTypes.player);
-        gameField.insertBefore(tile, toDelete);
-        gameField.removeChild(toDelete);
+        gameField.replaceChild(tile, toDelete);
     }
 }

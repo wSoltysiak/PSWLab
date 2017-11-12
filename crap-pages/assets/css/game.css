@@ -18,7 +18,7 @@ h1, h2 {
 
 .game-field {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     width: 1024px;
     height: 640px;
 }

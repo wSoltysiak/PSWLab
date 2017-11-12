@@ -13,5 +13,10 @@
         player.move(event.keyCode);
         world.render();
         player.render();
+
+        console.log(world.isCup(player.x, player.y));
+        if (world.isCup(player.x, player.y)) {
+            alert('Brawo! Udało się!');
+        }
     }
 })();

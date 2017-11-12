@@ -6,7 +6,7 @@ class World {
     }
 
     generate() {
-        this.tiles = new Array(8).fill().map(() => new Array(5).fill(TileTypes.grass));
+        this.tiles = new Array(this.width).fill().map(() => new Array(this.height).fill(TileTypes.grass));
         this.generateCup(this.tiles);
     }
 
@@ -14,22 +14,30 @@ class World {
         const x = Math.floor(Math.random() * 100 % this.width);
         const y = Math.floor(Math.random() * 100 % this.height);
         tiles[x][y] = TileTypes.cup;
+        return tiles;
     }
 
     render() {
         this.clear();
+        const flatTiles = this.tiles.reduce((accumulator, xTiles) => accumulator.concat(xTiles));
+        flatTiles.forEach(this.renderTile);
+    }
+
+    renderTile(tile) {
         const gameField = document.querySelector('#game-field');
-        this.tiles.forEach(tiles => tiles.forEach(tileType => {
-            let tile = document.createElement('div');
-            tile.classList.add('game-field__tile');
-            tile.classList.add(tileType);
-            gameField.appendChild(tile);
-        }));
+        let tileElement = document.createElement('div');
+        tileElement.classList.add('game-field__tile');
+        tileElement.classList.add(tile);
+        gameField.appendChild(tileElement);
     }
 
     clear() {
         const gameField = document.querySelector('#game-field');
         const tiles = gameField.children;
         Array.from(tiles).forEach(tile => gameField.removeChild(tile));
+    }
+
+    isCup(x, y) {
+        return this.tiles[x][y] === TileTypes.cup;
     }
 }
