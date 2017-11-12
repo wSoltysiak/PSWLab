@@ -13,6 +13,7 @@
         render();
         gameField.focus();
         gameField.onkeypress = gameLoop;
+        gameField.onkeydown = extraKeysManager;
     }
 
     function createDescription() {
@@ -39,6 +40,31 @@
 
     function showSuccessAlert() {
         alert('Brawo! Od teraz jeteś nieśmiertelny.');
+    }
+
+    function extraKeysManager(event) {
+        if (event.altKey) {
+            showHelp();
+        } else if (event.ctrlKey) {
+            showAuthors();
+        } else if (event.shiftKey) {
+            resetGame();
+        }
+    }
+
+    function showHelp() {
+        alert('Zasady gry: \n W, A, S, D - sterowanie \n alt - pomoc \n ctrl - autorzy \n shift - ponowne losowanie planszy');
+    }
+
+    function showAuthors() {
+        alert('Autorzy: \n Jakub Nadolny \n Wojciech Sołtysiak');
+    }
+
+    function resetGame() {
+        player.x = 0;
+        player.y = 0;
+        world.generate();
+        render();
     }
 
     startGame();
