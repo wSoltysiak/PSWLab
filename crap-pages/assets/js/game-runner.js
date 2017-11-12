@@ -8,10 +8,17 @@
     const renderElements = [world, player];
 
     function startGame() {
+        createDescription();
         world.generate();
         render();
         gameField.focus();
         gameField.onkeypress = gameLoop;
+    }
+
+    function createDescription() {
+        const gameContainer = gameField.parentNode;
+        const description = document.createTextNode('Twoim zadaniem jest odnalezienie zagubionego pucharu nieśmiertelności');
+        gameContainer.appendChild(description);
     }
 
     function render() {
@@ -31,7 +38,7 @@
     }
 
     function showSuccessAlert() {
-        alert('Brawo! Udało się!');
+        alert('Brawo! Od teraz jeteś nieśmiertelny.');
     }
 
     startGame();
