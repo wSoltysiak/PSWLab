@@ -21,6 +21,7 @@ h1, h2 {
     flex-flow: column wrap;
     width: 1024px;
     height: 640px;
+    margin: 25px 0;
 }
 
 .game-field__tile {
