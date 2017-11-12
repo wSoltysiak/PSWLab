@@ -19,7 +19,7 @@
     }
 
     function gameLoop(event) {
-        player.move(event.keyCode);
+        player.move(event.keyCode, worldWidth, worldHeight);
         render();
         if (isEndOfGame()) {
             showSuccessAlert();
@@ -27,7 +27,7 @@
     }
 
     function isEndOfGame() {
-        return world.isCup(player.x, player.y);
+        return world.isCupOnTile(player.x, player.y);
     }
 
     function showSuccessAlert() {

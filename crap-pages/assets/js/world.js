@@ -37,7 +37,7 @@ class World {
         Array.from(tiles).forEach(tile => gameField.removeChild(tile));
     }
 
-    isCup(x, y) {
+    isCupOnTile(x, y) {
         return this.tiles[x][y] === TileTypes.cup;
     }
 }

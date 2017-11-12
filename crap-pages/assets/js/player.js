@@ -4,25 +4,25 @@ class Player {
         this.y = 0;
     }
 
-    move(direction) {
+    move(direction, worldWidth, worldHeight) {
         switch(direction) {
-            case 97:
+            case Directions.left:
                 if (this.x > 0) {
                     this.x--;
                 }
                 break;
-            case 119:
+            case Directions.top:
                 if (this.y > 0) {
                     this.y--;
                 }
                 break;
-            case 100:
-                if (this.x < 7) {
+            case Directions.right:
+                if (this.x < worldWidth - 1) {
                     this.x++;
                 }
                 break;
-            case 115:
-                if (this.y < 4) {
+            case Directions.bottom:
+                if (this.y < worldHeight - 1) {
                     this.y++;
                 }
                 break;
@@ -30,11 +30,20 @@ class Player {
     }
 
     render() {
+        const newTile = this.createPlayerTile();
+        this.replaceTile(newTile);
+    }
+
+    createPlayerTile() {
+        const playerTile = document.createElement('div');
+        playerTile.classList.add('game-field__tile');
+        playerTile.classList.add(TileTypes.player);
+        return playerTile;
+    }
+
+    replaceTile(newTile) {
         const gameField = document.querySelector('#game-field');
-        const toDelete = document.querySelector('#game-field').children[this.x * 5 + this.y];
-        let tile = document.createElement('div');
-        tile.classList.add('game-field__tile');
-        tile.classList.add(TileTypes.player);
-        gameField.replaceChild(tile, toDelete);
+        const toReplace = gameField.children[this.x * 5 + this.y];
+        gameField.replaceChild(newTile, toReplace);
     }
 }
