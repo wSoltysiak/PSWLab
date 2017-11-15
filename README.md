@@ -4,7 +4,7 @@
 - [x] CSS_1
 - [x] CSS_2
 - [x] JS
-- [ ] DOM
+- [x] DOM
 - [ ] XAMPP & ASP.NET
 - [ ] PHP_1
 - [ ] PHP_2

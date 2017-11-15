@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gra">
+    <meta name="keywords"
+          content="CSS, Pokaz">
+    <meta name="author" content="Jakub Nadolny, Wojciech Sołtysiak">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pangolin&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/game.css">
+    <script src="./assets/js/tile-types.js"></script>
+    <script src="./assets/js/directions.js"></script>
+    <script src="./assets/js/world.js"></script>
+    <script src="./assets/js/player.js"></script>
+    <title>Najtrudniejsza gra</title>
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-container__box">
+            <h1>Witaj w najtrudniejszej grze świata</h1>
+            <div id="game-field" class="game-field" tabindex="1"></div>
+        </div>
+        <div class="game-container__box">
+            <h1>Ostyluj swoją grę!</h1>
+            <h2>(bez znajomości CSSa)</h2>
+            Podaj kolor tła: <input type="text" id="background-color">
+            Podaj kolor czcionki: <input type="text" id="font-color">
+            Wybierz krój czcionki:
+            <select id="font-family">
+                <option value="Merriweather">Merriweather</option>
+                <option value="Arial">Arial</option>
+                <option value="Pangolin">Pangolin</option>
+            </select>
+        </div>
+    </div>
+
+    <script src="./assets/js/game-runner.js"></script>
+    <script src="./assets/js/style-changer.js"></script>
+    <script src="./assets/js/game-mouse-events.js"></script>
+</body>
+</html>
