@@ -89,7 +89,7 @@
     <h2 class="info-section__header">
         Formularz zapisu do zajęć bibliotecznych - cz. 1
     </h2>
-    <form class="library-form" action="form-next.html" method="POST">
+    <form id="submit1" class="library-form" action="form-next.html" method="POST">
         <fieldset class="library-form-aligned">
             <legend style="font-family: fantasy">Przedstaw się</legend>
             <div class="library-control-group">
@@ -141,7 +141,7 @@
                        placeholder="Adres email"
                        autocomplete="on"
                        required 
-                       onclick="showHint(3);">
+                       onblur="showHint(3);">
                 <label class="library-form-message-inline" for="email">Wpisz swoj email. Należy użyć znaku @.</label>
             </div>
             <div class="library-control-group">
@@ -194,8 +194,8 @@
             <br><input id="newsletter" type="checkbox"> Chcę otrzymywać emaile z materiałami zajęciowymi.
         </fieldset>
         <fieldset>
-            <input class="library-button library-button-primary library-button-red" type="reset" onclick="return confirm_reset();">
-            <input class="library-button library-button-primary" type="submit" onclick="return confirm_submit();">
+            <input class="library-button library-button-primary library-button-red" type="reset">
+            <input class="library-button library-button-primary" type="submit">
         </fieldset>
     </form>
 </section>
@@ -205,7 +205,7 @@
 <div class="collection-info">
     
 </div>
-<script src="assets/js/formhints.js"></script>
-<script src="assets/js/confirmation.js"></script>
+<script type='text/javascript' src="assets/js/formhints.js"></script>
+<script type='text/javascript' src="assets/js/confirmation.js"></script>
 </body>
 </html>

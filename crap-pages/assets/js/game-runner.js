@@ -1,6 +1,6 @@
 (function() {
     const gameField = document.querySelector('#game-field');
-    const worldWidth  = 8;
+    const worldWidth = 8;
     const worldHeight = 5;
 
     const player = new Player();
@@ -39,7 +39,7 @@
     }
 
     function showSuccessAlert() {
-        alert('Brawo! Od teraz jeteś nieśmiertelny.');
+        alert('Brawo! Od teraz jesteś nieśmiertelny.');
     }
 
     function extraKeysManager(event) {

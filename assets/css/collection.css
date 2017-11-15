@@ -1,7 +1,8 @@
-.collection-info{
-    width:100%;
-    padding:20px;
+.collection-info {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
     text-align: center;
-    color:white;
+    color: white;
     background-color: #222;
 }
