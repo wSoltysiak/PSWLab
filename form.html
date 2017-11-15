@@ -193,8 +193,8 @@
             <br><input id="newsletter" type="checkbox"> Chcę otrzymywać emaile z materiałami zajęciowymi.
         </fieldset>
         <fieldset>
-            <input class="library-button library-button-primary library-button-red" type="reset">
-            <input class="library-button library-button-primary" type="submit">
+            <input class="library-button library-button-primary library-button-red" type="reset" onclick="return confirm_reset();">
+            <input class="library-button library-button-primary" type="submit" onclick="return confirm_submit();">
         </fieldset>
     </form>
 </section>
@@ -205,5 +205,6 @@
     
 </div>
 <script src="assets/js/formhints.js"></script>
+<script src="assets/js/confirmation.js"></script>
 </body>
 </html>
