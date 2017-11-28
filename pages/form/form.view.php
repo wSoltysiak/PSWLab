@@ -16,14 +16,13 @@
     <link rel="stylesheet" type="text/css" href="assets/css/main-footer.css">
     <link rel="stylesheet" type="text/css" href="assets/css/collection.css">
     <title>Biblioteka miejska - zapisy zajęciowe</title>
-<!--    Style wbudowane w html-->
+    <!-- TODO: do usunięcia -->
     <style>
         #book-name{
             font-family: monospace;
             font-size: 1.5em;
         }
     </style>
-<!--    Koniec styli-->
 </head>
 <body>
 <header class="welcome-header">

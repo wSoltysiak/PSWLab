@@ -61,7 +61,7 @@
             <li><a href="pages/home/index.html"><b>Strona główna</b></a></li>
             <li><a href="pages/gallery/gallery.html">Galeria</a></li>
             <li><a href="pages/team/team.html">Pracownicy</a></li>
-            <li><a href="form.html">Zajęcia biblioteczne</a></li>
+            <li><a href="pages/form/form.html">Zajęcia biblioteczne</a></li>
             <li><a href="mailto:bibl@zlotow.pl">Kontakt</a></li>
             <li><a href="http://www.gminazlotow.pl/">Gmina Złotów</a></li>
         </ul>
