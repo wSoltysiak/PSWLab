@@ -86,38 +86,38 @@ class FormModel {
                 }
             }
         }
-
-        print_r($this->validation);
     }
 
 
     // TODO: wydzielić do osobnej klasy
     private function validString($data) {
-        return preg_match("/^[a-zA-Z0]+$/", $data) == 1;
+        return preg_match("/^[a-zA-Z]+$/", $data) == 1;
     }
 
     private function validText($data) {
-        return true;
+        return preg_match("/^[a-zA-Z0-9]+$/", $data) == 1;
     }
 
     private function validMonth($data) {
-        return true;
+        $months = ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Paździenik', 'Listopad', 'Grudzień'];
+        return in_array($data, $months);
     }
 
     private function validEmail($data) {
-        return true;
+        return filter_var($data, FILTER_VALIDATE_EMAIL) != false;
     }
 
     private function validPhone($data) {
-        return true;
+        return preg_match("/^\d{3} \d{3} \d{3}$/", $data) == 1;
     }
 
     private function validAge($data) {
-        return true;
+        $ageGroups = ['teenager', 'adult', 'senior'];
+        return in_array($data, $ageGroups);
     }
 
     private function validBoolean($data) {
-        return true;
+        return $data == 'on';
     }
 
     private function isPostRequest() {
