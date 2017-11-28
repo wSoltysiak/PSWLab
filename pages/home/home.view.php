@@ -58,7 +58,7 @@
                 </ul>
             </li>
             <li><a href="index.html"><b>Strona główna</b></a></li>
-            <li><a href="../../gallery.html">Galeria</a></li>
+            <li><a href="../gallery/gallery.html">Galeria</a></li>
             <li><a href="../../team.html">Pracownicy</a></li>
             <li><a href="../../form.html">Zajęcia biblioteczne</a></li>
             <li><a href="mailto:bibl@zlotow.pl">Kontakt</a></li>

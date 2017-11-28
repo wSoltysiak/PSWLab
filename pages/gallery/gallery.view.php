@@ -105,7 +105,7 @@
 <div class="collection-info">
     
 </div>
-<script src="./assets/js/gallery.js"></script>
-<script src="./assets/js/imagehints.js"></script>
+<script src="assets/js/gallery.js"></script>
+<script src="assets/js/imagehints.js"></script>
 </body>
 </html>
