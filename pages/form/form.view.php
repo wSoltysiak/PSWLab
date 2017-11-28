@@ -5,7 +5,7 @@
     <h2 class="info-section__header">
         Formularz zapisu do zajęć bibliotecznych - cz. 1
     </h2>
-    <form id="submit1" class="library-form" action="form-next.html" method="POST">
+    <form id="submit1" class="library-form" action="index.php?page=form" method="POST">
         <fieldset class="library-form-aligned">
             <legend style="font-family: fantasy">Przedstaw się</legend>
             <div class="library-control-group">
