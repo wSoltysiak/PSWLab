@@ -1,12 +1,15 @@
 <?php
 
 include_once('pages/controller.interface.php');
-//include_once('./form.model.php');
+include_once('form.model.php');
 
 class FormController implements Controller {
     const view = 'form.view.php';
+    private $model;
 
     public function start() {
+        $this->model = new FormModel();
+        $this->model->getPostData();
         $this->render();
     }
 

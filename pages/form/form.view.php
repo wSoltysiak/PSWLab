@@ -11,7 +11,7 @@
             <div class="library-control-group">
                 <input class="library-input-third"
                        type="text"
-                       name="firstname"
+                       name="first-name"
                        id="firstname"
                        placeholder="Imię"
                        autocomplete="on"
@@ -22,7 +22,7 @@
                 <input class="library-input-third"
                        type="text"
                        id="lastname"
-                       name="lastname"
+                       name="last-name"
                        placeholder="Nazwisko"
                        autocomplete="on"
                        required>
@@ -30,6 +30,7 @@
             </div>
             <div class="library-control-group">
                 <input class="library-input-third"
+                       name="month"
                        id="months-visible"
                        list="months"
                        placeholder="Miesiąc">
@@ -63,7 +64,7 @@
                 <input class="library-input-third"
                        type="tel"
                        id="tel"
-                       name="tel"
+                       name="phone"
                        placeholder="999 999 999"
                        autocomplete="on"
                        pattern="\d{3}[\s]\d{3}[\s]\d{3}">
@@ -74,7 +75,7 @@
         <fieldset>
             <legend>Jaki gatunek książek Cię interesuje?</legend>
             Książki
-            <select name="interests">
+            <select name="interest">
                 <optgroup label="Fabularne">
                     <option value="adventure">Przygodowe</option>
                     <option value="criminal">Kryminalne</option>
@@ -89,24 +90,32 @@
 
         <fieldset class="library-group">
             <legend>Opisz swoją ulubioną książkę</legend>
-            <input id="book-name" class="library-input-half"
+            <input id="book-name"
+                   name="book-name"
+                   class="library-input-half"
                    type="text"
                    placeholder="Tytuł książki">
             <textarea class="library-input-half"
+                      name="book-description"
                       maxlength="200"
                       placeholder="Co Ci sie w niej podobało?"></textarea>
         </fieldset>
 
         <fieldset>
             <legend>Do jakiej grupy chcesz uczęszczać?</legend>
-            <input type="radio" name="age" value="teenager"> Grupa młodzieżowa
-            <br><input type="radio" name="age" value="adult"> Grupa dla dorosłych
-            <br><input type="radio" name="age" value="senior"> Grupa dla seniorow
+            <input type="radio" name="age-group" value="teenager"> Grupa młodzieżowa
+            <br><input type="radio" name="age-group" value="adult"> Grupa dla dorosłych
+            <br><input type="radio" name="age-group" value="senior"> Grupa dla seniorow
         </fieldset>
         <fieldset>
             <legend>Zaznacz wybrane pola</legend>
-            <input id="regulamin" type="checkbox"> Zgadzam się z regulaminem zajęć.
-            <br><input id="newsletter" type="checkbox"> Chcę otrzymywać emaile z materiałami zajęciowymi.
+            <input id="regulamin"
+                   type="checkbox"
+                   name="first-agreement"> Zgadzam się z regulaminem zajęć.
+            <br>
+            <input id="newsletter"
+                   type="checkbox"
+                   name="second-agreement"> Chcę otrzymywać emaile z materiałami zajęciowymi.
         </fieldset>
         <fieldset>
             <input class="library-button library-button-primary library-button-red" type="reset">
