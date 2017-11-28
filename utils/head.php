@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/info-section.css">
     <link rel="stylesheet" type="text/css" href="assets/css/collection.css">
+    <!-- TODO: zrobić tytuł z kontrolera -->
     <title>Biblioteka miejska - strona główna</title>
 </head>
 <body>

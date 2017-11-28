@@ -1,89 +1,6 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Strona biblioteki miejskiej">
-    <meta name="keywords" content="Biblioteka, Miejska, Książki, Wypożyczenia, Biblioteka Miejska, Czytanie, Czytelnictwo, Edukacja">
-    <meta name="author" content="Jakub Nadolny, Wojciech Sołtysiak">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&amp;subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/welcome-header.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/info-section.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/dropdown-menu.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/form.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/button.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/main-footer.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/collection.css">
-    <title>Biblioteka miejska - zapisy zajęciowe</title>
-    <!-- TODO: do usunięcia -->
-    <style>
-        #book-name{
-            font-family: monospace;
-            font-size: 1.5em;
-        }
-    </style>
-</head>
-<body>
-<header class="welcome-header">
-    <nav class="dropdown-menu">
-        <ul class="dropdown-menu__first-level">
-            <li id="category1">Kategoria 1
-                <ul id="category1__submenu" class="dropdown-menu__box dropdown-menu__box--submenu">
-                    <li>Podkategoria 1</li>
-                    <li>Podkategoria 2</li>
-                    <li id="subcategory1">Podkategoria 3
-                        <ul id="subcategory1__submenu" class="dropdown-menu__box dropdown-menu__box--subsubmenu">
-                            <li>Podkategoria 1</li>
-                            <li>Podkategoria 2</li>
-                            <li>Podkategoria 3</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li id="category2">Kategoria 2
-                <ul id="category2__submenu" class="dropdown-menu__box dropdown-menu__box--submenu">
-                    <li>Podkategoria 1</li>
-                    <li>Podkategoria 2</li>
-                    <li id="subcategory2">Podkategoria 3
-                        <ul id="subcategory2__submenu" class="dropdown-menu__box dropdown-menu__box--subsubmenu">
-                            <li>Podkategoria 1</li>
-                            <li>Podkategoria 2</li>
-                            <li>Podkategoria 3</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li id="category3">Kategoria 3
-                <ul id="category3__submenu" class="dropdown-menu__box dropdown-menu__box--submenu">
-                    <li>Podkategoria 1</li>
-                    <li id="subcategory3">Podkategoria 2
-                        <ul id="subcategory3__submenu" class="dropdown-menu__box dropdown-menu__box--subsubmenu">
-                            <li>Podkategoria 1</li>
-                            <li>Podkategoria 2</li>
-                            <li>Podkategoria 3</li>
-                        </ul>
-                    </li>
-                    <li>Podkategoria 3</li>
-                </ul>
-            </li>
-            <li><a href="pages/home/index.html">Strona główna</a></li>
-            <li><a href="pages/gallery/gallery.html">Galeria</a></li>
-            <li><a href="pages/team/team.html">Pracownicy</a></li>
-            <li><a href="form.html"><b>Zajęcia biblioteczne</b></a></li>
-            <li><a href="mailto:bibl@zlotow.pl">Kontakt</a></li>
-            <li><a href="http://www.gminazlotow.pl/">Gmina Złotów</a></li>
-        </ul>
-    </nav>
-    <div class="welcome-header__container">
-        <h1 class="welcome-header__header">
-            Biblioteka miejska
-        </h1>
-        <h2 class="welcome-header__header welcome-header__header--small">
-            w Złotowie
-        </h2>
-    </div>
-</header>
+<link rel="stylesheet" type="text/css" href="assets/css/form.css">
+<link rel="stylesheet" type="text/css" href="assets/css/button.css">
+
 <section class="info-section">
     <h2 class="info-section__header">
         Formularz zapisu do zajęć bibliotecznych - cz. 1
@@ -197,13 +114,8 @@
         </fieldset>
     </form>
 </section>
-<footer class="main-footer">
-    <span class="main-footer__text">&copy; Biblioteka miejska w Złotowie - 2017</span>
-</footer>
-<div class="collection-info">
-    
-</div>
+
+<div class="collection-info"></div>
+
 <script type='text/javascript' src="assets/js/formhints.js"></script>
 <script type='text/javascript' src="assets/js/confirmation.js"></script>
-</body>
-</html>
