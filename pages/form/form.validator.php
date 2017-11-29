@@ -49,7 +49,7 @@ class FormValidator {
     }
 
     private function validBoolean($data) {
-        return $data == 'on';
+        return strcmp($data, 'on') == 0;
     }
 }
 

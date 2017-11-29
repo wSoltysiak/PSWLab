@@ -10,9 +10,9 @@ class Router {
 
     public function route($pageName) {
         if ($this->isAllowedPage($pageName)) {
-            include('./pages/' . $pageName . '/' . $pageName . '.controller.php');
+            include("./pages/{$pageName}/{$pageName}.controller.php");
         } else {
-            die('404 Not Found');
+            die("404 Not Found \n escapowanie");
         }
     }
 

@@ -4,12 +4,11 @@ include_once('form.validator.php');
 
 class FormModel {
 
-    // TODO: wydzielić rules do enuma
     public $validation;
     private $validator;
-
     public function __construct() {
         $this->validator = new FormValidator();
+        // TODO: wydzielić rules do enuma
         $this->validation = [
             'first-name' => [
                 'isValid' => true,
@@ -68,7 +67,7 @@ class FormModel {
     }
 
     private function isPostRequest() {
-        return $_SERVER["REQUEST_METHOD"] == "POST";
+        return $_SERVER['REQUEST_METHOD'] === 'POST';
     }
 
     private function clearInput($data) {
