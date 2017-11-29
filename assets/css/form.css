@@ -68,3 +68,9 @@
 .library-form input:required {
     border-bottom-color: crimson;
 }
+
+.library-form__error {
+    font-size: 12px;
+    margin: 5px;
+    color: #FF0000;
+}

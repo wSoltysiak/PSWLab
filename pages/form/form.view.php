@@ -17,6 +17,13 @@
                        autocomplete="on"
                        autofocus>
                 <label class="library-form-message-inline" for="firstname">Wpisz swoje imię.</label>
+                <?php
+                if (!$this->model->validation['first-name']['isValid']) {
+                    ?>
+                    <p class="library-form__error">Imię jest błędne!</p>
+                    <?php
+                }
+                ?>
             </div>
             <div class="library-control-group">
                 <input class="library-input-third"
@@ -27,6 +34,13 @@
                        autocomplete="on"
                        required>
                 <label class="library-form-message-inline" for="lastname">Wpisz swoje nazwisko.</label>
+                <?php
+                if (!$this->model->validation['last-name']['isValid']) {
+                    ?>
+                    <p class="library-form__error">Nazwisko jest błędne!</p>
+                    <?php
+                }
+                ?>
             </div>
             <div class="library-control-group">
                 <input class="library-input-third"
@@ -49,6 +63,13 @@
                     <option value="Grudzień">
                 </datalist>
                 <label class="library-form-message-inline" for="months-visible">Wpisz swoj miesiąc urodzenia.</label>
+                <?php
+                if (!$this->model->validation['month']['isValid']) {
+                    ?>
+                    <p class="library-form__error">Miesiąc jest błędny!</p>
+                    <?php
+                }
+                ?>
             </div>
             <div class="library-control-group">
                 <input class="library-input-third"
@@ -59,6 +80,13 @@
                        autocomplete="on"
                        required>
                 <label class="library-form-message-inline" for="email">Wpisz swoj email. Należy użyć znaku @.</label>
+                <?php
+                if (!$this->model->validation['email']['isValid']) {
+                    ?>
+                    <p class="library-form__error">Email jest błędny!</p>
+                    <?php
+                }
+                ?>
             </div>
             <div class="library-control-group">
                 <input class="library-input-third"
@@ -69,6 +97,13 @@
                        autocomplete="on"
                        pattern="\d{3}[\s]\d{3}[\s]\d{3}">
                 <label class="library-form-message-inline" for="tel">Wpisz swoj numer telefonu. Tylko cyfry.</label>
+                <?php
+                if (!$this->model->validation['phone']['isValid']) {
+                    ?>
+                    <p class="library-form__error">Numer telefonu jest błędny!</p>
+                    <?php
+                }
+                ?>
             </div>
         </fieldset>
 
@@ -95,10 +130,24 @@
                    class="library-input-half"
                    type="text"
                    placeholder="Tytuł książki">
+            <?php
+            if (!$this->model->validation['book-name']['isValid']) {
+                ?>
+                <p class="library-form__error">Tytuł jest błędny!</p>
+                <?php
+            }
+            ?>
             <textarea class="library-input-half"
                       name="book-description"
                       maxlength="200"
                       placeholder="Co Ci sie w niej podobało?"></textarea>
+            <?php
+            if (!$this->model->validation['book-description']['isValid']) {
+                ?>
+                <p class="library-form__error">Opis jest błędny!</p>
+                <?php
+            }
+            ?>
         </fieldset>
 
         <fieldset>
@@ -106,12 +155,26 @@
             <input type="radio" name="age-group" value="teenager"> Grupa młodzieżowa
             <br><input type="radio" name="age-group" value="adult"> Grupa dla dorosłych
             <br><input type="radio" name="age-group" value="senior"> Grupa dla seniorow
+            <?php
+            if (!$this->model->validation['age-group']['isValid']) {
+                ?>
+                <p class="library-form__error">Grupa jest błędna!</p>
+                <?php
+            }
+            ?>
         </fieldset>
         <fieldset>
             <legend>Zaznacz wybrane pola</legend>
             <input id="regulamin"
                    type="checkbox"
                    name="first-agreement"> Zgadzam się z regulaminem zajęć.
+            <?php
+            if (!$this->model->validation['first-agreement']['isValid']) {
+                ?>
+                <p class="library-form__error">Pole obowiązkowe</p>
+                <?php
+            }
+            ?>
             <br>
             <input id="newsletter"
                    type="checkbox"

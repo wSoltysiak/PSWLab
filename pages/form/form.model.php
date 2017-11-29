@@ -5,7 +5,7 @@ include_once('form.validator.php');
 class FormModel {
 
     // TODO: wydzielić rules do enuma
-    private $validation;
+    public $validation;
     private $validator;
 
     public function __construct() {
