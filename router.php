@@ -12,7 +12,7 @@ class Router {
         if ($this->isAllowedPage($pageName)) {
             include('./pages/' . $pageName . '/' . $pageName . '.controller.php');
         } else {
-            echo '404 Not Found';
+            die('404 Not Found');
         }
     }
 
