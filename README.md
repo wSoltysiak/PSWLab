@@ -6,6 +6,6 @@
 - [x] JS
 - [x] DOM
 - [x] XAMPP & ASP.NET
-- [ ] PHP_1
+- [x] PHP_1
 - [ ] PHP_2
 - [ ] PHP_3
