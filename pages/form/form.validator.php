@@ -1,21 +1,23 @@
 <?php
 
+include_once('utils/validation-rules.php');
+
 class FormValidator {
     public function valid($rule, $data) {
         switch ($rule) {
-            case 'string':
+            case ValidationRules::string:
                 return $this->validString($data);
-            case 'text':
+            case ValidationRules::text:
                 return $this->validText($data);
-            case 'month':
+            case ValidationRules::month:
                 return $this->validMonth($data);
-            case 'email':
+            case ValidationRules::email:
                 return $this->validEmail($data);
-            case 'phone':
+            case ValidationRules::phone:
                 return $this->validPhone($data);
-            case 'age':
+            case ValidationRules::age:
                 return $this->validAge($data);
-            case 'boolean':
+            case ValidationRules::boolean:
                 return $this->validBoolean($data);
             default:
                 return false;

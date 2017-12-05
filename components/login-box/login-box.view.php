@@ -10,7 +10,7 @@
     <input type="password"
            class="login-box__text-input"
            name="password"
-           placeholder="Password">
+           placeholder="Hasło">
     <input type="submit"
            class="library-button library-button-primary"
            value="Zaloguj!">
