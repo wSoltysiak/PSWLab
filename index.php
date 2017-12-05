@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     include('./router.php');
     $router = new Router();
     $pageName = $router->getPageName();
