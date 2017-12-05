@@ -2,6 +2,7 @@
 
 include_once('form.validator.php');
 include_once('utils/validation-rules.php');
+include_once('utils/post-helpers.php');
 
 class FormModel {
 
@@ -58,16 +59,12 @@ class FormModel {
     }
 
     public function getPostData() {
-        if ($this->isPostRequest()) {
+        if (isPostRequest()) {
             foreach ($this->validation as $key => $value) {
                 $clearData = $this->clearInput($_POST[$key]);
                 $this->validation[$key]['isValid'] = $this->validator->valid($value['rule'], $clearData);
             }
         }
-    }
-
-    private function isPostRequest() {
-        return $_SERVER['REQUEST_METHOD'] === 'POST';
     }
 
     private function clearInput($data) {
