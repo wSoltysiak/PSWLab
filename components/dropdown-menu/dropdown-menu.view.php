@@ -20,5 +20,10 @@
         </li>
         <li><a href="index.php?page=form">Zajęcia biblioteczne</a></li>
         <li><a href="index.php?page=user">Panel Użytkownika</a></li>
+        <?php if (isset($_SESSION['isLogged']) && $_SESSION['isLogged']) { ?>
+            <li><a href="index.php?page=logout">Wyloguj się</a></li>
+        <?php } else { ?>
+            <li><a href="index.php?page=login">Zaloguj się</a></li>
+        <?php } ?>
     </ul>
 </nav>
