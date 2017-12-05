@@ -48,7 +48,7 @@ class LoginModel {
     }
 
     private function redirectToProtectedPage() {
-        header('Location: index.php?page=secret');
+        header('Location: index.php?page=gallery');
     }
 
 }
