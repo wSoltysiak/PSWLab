@@ -43,8 +43,7 @@ class LoginModel {
     }
 
     private function redirectToProtectedPage() {
-        // TODO
-        echo 'success';
+        header('Location: index.php?page=secret');
     }
 
 }

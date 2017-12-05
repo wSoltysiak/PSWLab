@@ -8,8 +8,8 @@ class LoginController implements Controller {
     private $model;
 
     public function start() {
-        $model = new LoginModel();
-        $model->login();
+        $this->model = new LoginModel();
+        $this->model->login();
         $this->render();
     }
 
