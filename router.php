@@ -1,7 +1,7 @@
 <?php
 
 class Router {
-    private $allowedPages = ['home', 'gallery', 'team', 'form', 'user'];
+    private $allowedPages = ['home', 'gallery', 'team', 'form', 'user', 'login'];
     const DEFAULT_PAGE = 'home';
 
     public function getPageName() {
