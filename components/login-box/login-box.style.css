@@ -1,0 +1,12 @@
+.login-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box__text-input {
+    padding: 0.5em 0.5em;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
