@@ -37,6 +37,10 @@
     display: flex;
 }
 
+.dropdown-menu__first-level li li > a {
+    color: #000000;
+}
+
 .dropdown-menu__first-level > li {
     padding: 0 10px;
     color: #FFFFFF;
