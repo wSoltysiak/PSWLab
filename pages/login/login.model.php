@@ -11,8 +11,9 @@ class LoginModel {
     ];
 
     public function login() {
-        if ($this->isCorrectCredentials()) {
+        if (isPostRequest() && $this->isCorrectCredentials()) {
             $this->setUpSession();
+            $this->setUpCookie();
             $this->redirectToProtectedPage();
         } else {
             $this->loginError = true;
@@ -40,6 +41,10 @@ class LoginModel {
     private function setUpSession() {
         $_SESSION['isLogged'] = true;
         $_SESSION['login'] = $_POST['login'];
+    }
+
+    private function setUpCookie() {
+        setcookie("SessionID", session_id());
     }
 
     private function redirectToProtectedPage() {
