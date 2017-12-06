@@ -1,21 +1,21 @@
 <?php
 
-include_once('pages/controller.interface.php');
+include_once('utils/controller.abstract.php');
 include_once('login.model.php');
 
-class LoginController implements Controller {
+class LoginController extends Controller {
     const view = 'login.view.php';
     private $model;
 
     public function start() {
+        parent::start();
         $this->model = new LoginModel();
         $this->model->login();
         $this->render();
     }
 
     public function render() {
-        include_once('./utils/head.php');
-        include_once('./components/header/header.view.php');
+        parent::render();
         include_once(LoginController::view);
     }
 }
