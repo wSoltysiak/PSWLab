@@ -1,12 +1,13 @@
 <?php
 
-include_once('pages/controller.interface.php');
+include_once('utils/controller.abstract.php');
 include_once('logout.model.php');
 
-class LogoutController implements Controller {
+class LogoutController extends Controller {
     private $model;
 
     public function start() {
+        parent::start();
         $this->model = new LogoutModel();
         $this->model->logoutUser();
     }
