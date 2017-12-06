@@ -11,41 +11,40 @@
     <p class="line4">><span class="cursor4">_</span></p>
 </div>
 
-<form action="index.php?page=user" method="POST">
+<form>
     <fieldset>
-        <label for="firstname">Imię:</label>
-        <input type="text" id="firstname" name="firstname" placeholder="Wpisz imię"/>
-        <label for="firstnameColor">Kolor tła</label>
-        <select id="firstnameColor" name="firstnameColor">
-            <option value="Grey">Szare</option>
-            <option value="Brown">Brązowe</option>
-            <option value="Blue">Niebieskie</option>
-            <option value="Green">Zielone</option>
+        <label for="firstName">Imię:</label>
+        <input type="text" id="firstName" name="firstName" placeholder="Wpisz imię"/>
+        <label for="firstNameColor">Kolor tła</label>
+        <select id="firstNameColor" name="lastNameColor">
+            <option value="grey">Szare</option>
+            <option value="brown">Brązowe</option>
+            <option value="blue">Niebieskie</option>
+            <option value="green">Zielone</option>
         </select>
     </fieldset>
 
     <fieldset>
-        <label for="lastname">Nazwisko:</label>
-        <input type="text" id="lastname" name="lastname" placeholder="Wpisz nazwisko"/>
-        <label for="lastnameColor">Kolor Nazwiska</label>
-        <select id="lastnameColor" name="lastnameColor">
-            <option value="Grey">Szare</option>
-            <option value="Brown">Brązowe</option>
-            <option value="Blue">Niebieskie</option>
-            <option value="Green">Zielone</option>
+        <label for="lastName">Nazwisko:</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Wpisz nazwisko"/>
+        <label for="lastNameColor">Kolor Nazwiska</label>
+        <select id="lastNameColor" name="lastNameColorr">
+            <option value="grey">Zielony</option>
+            <option value="brown">Niebieski</option>
+            <option value="blue">Fioletowy</option>
+            <option value="green">Różowy</option>
         </select>
     </fieldset>
 
     <fieldset>
-        <label for="font">font</label>
-        <input type="text" id="font" name="font" placeholder="adam@example.com"/>
-        <label for="fontColor">Kolor czcionki</label>
-        <select id="fontColor" name="fontColor">
-            <option value="Grey">Szare</option>
-            <option value="Brown">Brązowe</option>
-            <option value="Blue">Niebieskie</option>
-            <option value="Green">Zielone</option>
+        <label for="firstName">Email:</label>
+        <input type="email" id="userMail" name="userMail" placeholder="adam@example.com"/>
+        <label for="mailColor">Kolor emaila</label>
+        <select id="mailColor" name="mailColor">
+            <option value="grey">Zielony</option>
+            <option value="brown">Niebieski</option>
+            <option value="blue">Fioletowy</option>
+            <option value="green">Różowy</option>
         </select>
     </fieldset>
-    <input type="submit"/>
 </form>

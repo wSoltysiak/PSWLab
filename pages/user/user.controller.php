@@ -8,11 +8,9 @@ class UserController implements Controller {
 
     public function start() {
         $this->model = new UserModel();
-        $this->model->autoReset();
-        $this->model->read();
+        $this->model->resetCookie();
         $css = $this->model->generateCSS();
         $this->render();
-        print_r($_POST);
         echo $css;
     }
 

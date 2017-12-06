@@ -8,17 +8,17 @@ class UserModel {
     const COOKIETIME = 3600;
     const COOKIEDEFAULT = [
         "firstname" => "John",
-        "firstnameColor" => "Grey",
+        "firstnameColor" => "Blue",
         "lastname" => "Doe",
-        "lastnameColor" => "Blue",
+        "lastnameColor" => "Green",
         "font" => "",
         "fontColor" => "Green",
     ];
     const COLORS = [
-        "Blue" => "#CDEE69",
+        "Green" => "#CDEE69",
         "Brown" => "#E09690",
-        "Green" => "#9CD9F0",
-        "Grey" => "#333333"
+        "Blue" => "#9CD9F0",
+        "Grey" => "#AAA"
     ];
 
     public function isSaved(){
@@ -31,21 +31,13 @@ class UserModel {
         }
     }
 
-    public function read(){
-        if(isPostRequest() && $this->correctValues()){
-            foreach ($_POST as $key => $value){
-                setcookie($key, $value, time() + self::COOKIETIME);
-            }
-        }
-    }
-
     public function saveData($data){
         setcookie("firstname", $data['firstname'], time() + self::COOKIETIME);
-        setcookie("firstnameColor", $data['firstnameColor'], time() + self::COOKIETIME);
-        setcookie("lastname", $data['lastname'], time() + self::COOKIETIME);
-        setcookie("lastnameColor", $data['lastnameColor'], time() + self::COOKIETIME);
-        setcookie("font", $data['font'], time() + self::COOKIETIME);
-        setcookie("fontColor", $data['fontColor'], time() + self::COOKIETIME);
+        setcookie("firstnameColor", $data['firstname'], time() + self::COOKIETIME);
+        setcookie("lastname", $data['firstname'], time() + self::COOKIETIME);
+        setcookie("lastnameColor", "Green", time() + self::COOKIETIME);
+        setcookie("font", "Green", time() + self::COOKIETIME);
+        setcookie("fontColor", "Green", time() + self::COOKIETIME);
     }
 
     public function loadData(){
@@ -85,16 +77,6 @@ class UserModel {
 
             return $css;
         }
-    }
-
-    public function correctValues(){
-        foreach (self::COOKIEDEFAULT as $key => $value){
-            if(!isset($_POST[$key])){
-                echo "Niepoprawne wartości";
-                return false;
-            }
-        }
-        return true;
     }
 
 }
