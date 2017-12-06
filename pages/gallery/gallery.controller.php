@@ -13,6 +13,8 @@ class GalleryController implements Controller {
     }
 
     public function render() {
+        include_once('./utils/head.php');
+        include_once('./components/header/header.view.php');
         $viewToLoad = $this->model->isPermissionGranted() ? GalleryController::view : 'pages/errors/403.view.php';
         include_once($viewToLoad);
     }

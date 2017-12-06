@@ -8,13 +8,15 @@ class UserController implements Controller {
 
     public function start() {
         $this->model = new UserModel();
-        $this->model->autoReset();
+        $this->model->resetCookie();
         $css = $this->model->generateCSS();
         $this->render();
         echo $css;
     }
 
     public function render() {
+        include_once('./utils/head.php');
+        include_once('./components/header/header.view.php');
         include_once(UserController::view);
     }
 }
