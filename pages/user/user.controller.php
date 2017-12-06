@@ -1,14 +1,12 @@
 <?php
-
-include_once('utils/controller.abstract.php');
 include_once('user.model.php');
+include_once('pages/controller.interface.php');
 
-class UserController extends Controller {
+class UserController implements Controller {
     const view = 'user.view.php';
     private $model;
 
     public function start() {
-        parent::start();
         $this->model = new UserModel();
         $this->model->autoReset();
         $this->model->read();
@@ -19,7 +17,8 @@ class UserController extends Controller {
     }
 
     public function render() {
-        parent::render();
+        include_once('./utils/head.php');
+        include_once('./components/header/header.view.php');
         include_once(UserController::view);
     }
 }

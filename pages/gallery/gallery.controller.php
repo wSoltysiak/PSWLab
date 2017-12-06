@@ -1,20 +1,20 @@
 <?php
 
-include_once('utils/controller.abstract.php');
+include_once('pages/controller.interface.php');
 include_once('gallery.model.php');
 
-class GalleryController extends Controller {
+class GalleryController implements Controller {
     const view = 'gallery.view.php';
     private $model;
 
     public function start() {
-        parent::start();
         $this->model = new GalleryModel();
         $this->render();
     }
 
-    protected function render() {
-        parent::render();
+    public function render() {
+        include_once('./utils/head.php');
+        include_once('./components/header/header.view.php');
         $viewToLoad = $this->model->isPermissionGranted() ? GalleryController::view : 'pages/errors/403.view.php';
         include_once($viewToLoad);
     }
