@@ -7,5 +7,5 @@
 - [x] DOM
 - [x] XAMPP & ASP.NET
 - [x] PHP_1
-- [ ] PHP_2
+- [x] PHP_2
 - [ ] PHP_3

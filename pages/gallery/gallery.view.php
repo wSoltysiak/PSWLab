@@ -1,6 +1,7 @@
 <link rel="stylesheet" type="text/css" href="assets/css/gallery.css">
 
-<section class="info-section info-section">
+<section class="info-section">
+    <h1>Witaj, <?php echo $_SESSION['login']; ?></h1>
     <h2 class="info-section__header">
         Zdjęcia z naszej biblioteki
     </h2>

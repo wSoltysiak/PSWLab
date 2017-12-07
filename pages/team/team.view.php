@@ -1,4 +1,3 @@
-<link rel="stylesheet" type="text/css" href="assets/css/aside-info.css">
 <link rel="stylesheet" type="text/css" href="assets/css/table.css">
 
 <section class="info-section">

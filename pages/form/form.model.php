@@ -1,6 +1,8 @@
 <?php
 
 include_once('form.validator.php');
+include_once('utils/validation-rules.php');
+include_once('utils/post-helpers.php');
 
 class FormModel {
 
@@ -8,66 +10,61 @@ class FormModel {
     private $validator;
     public function __construct() {
         $this->validator = new FormValidator();
-        // TODO: wydzielić rules do enuma
         $this->validation = [
             'first-name' => [
                 'isValid' => true,
-                'rule' => 'string'
+                'rule' => ValidationRules::string
             ],
             'last-name' => [
                 'isValid' => true,
-                'rule' => 'string'
+                'rule' => ValidationRules::string
             ],
             'month' => [
                 'isValid' => true,
-                'rule' => 'month'
+                'rule' => ValidationRules::month
             ],
             'email' => [
                 'isValid' => true,
-                'rule' => 'email'
+                'rule' => ValidationRules::email
             ],
             'phone' => [
                 'isValid' => true,
-                'rule' => 'phone'
+                'rule' => ValidationRules::phone
             ],
             'interest' => [
                 'isValid' => true,
-                'rule' => 'string'
+                'rule' => ValidationRules::string
             ],
             'book-name' => [
                 'isValid' => true,
-                'rule' => 'text'
+                'rule' => ValidationRules::text
             ],
             'book-description' => [
                 'isValid' => true,
-                'rule' => 'text'
+                'rule' => ValidationRules::text
             ],
             'age-group' => [
                 'isValid' => true,
-                'rule' => 'age'
+                'rule' => ValidationRules::age
             ],
             'first-agreement' => [
                 'isValid' => true,
-                'rule' => 'boolean'
+                'rule' => ValidationRules::boolean
             ],
             'second-agreement' => [
                 'isValid' => true,
-                'rule' => 'boolean'
+                'rule' => ValidationRules::boolean
             ],
         ];
     }
 
     public function getPostData() {
-        if ($this->isPostRequest()) {
+        if (isPostRequest()) {
             foreach ($this->validation as $key => $value) {
                 $clearData = $this->clearInput($_POST[$key]);
                 $this->validation[$key]['isValid'] = $this->validator->valid($value['rule'], $clearData);
             }
         }
-    }
-
-    private function isPostRequest() {
-        return $_SERVER['REQUEST_METHOD'] === 'POST';
     }
 
     private function clearInput($data) {

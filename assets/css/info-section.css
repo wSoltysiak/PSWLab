@@ -3,6 +3,7 @@
     max-width: 700px;
     margin: 60px auto;
     padding: 0 10px;
+    flex: 1 0 auto;
 }
 
 .info-section--columned {
