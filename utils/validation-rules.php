@@ -7,4 +7,5 @@
         const age = 'age';
         const boolean = 'boolean';
         const text = 'text';
+        const password = 'password';
     }

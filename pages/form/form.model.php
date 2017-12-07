@@ -11,6 +11,14 @@ class FormModel {
     public function __construct() {
         $this->validator = new FormValidator();
         $this->validation = [
+            'login' => [
+                'isValid' => true,
+                'rule' => ValidationRules::string
+            ],
+            'password' => [
+                'isValid' => true,
+                'rule' => ValidationRules::password
+            ],
             'first-name' => [
                 'isValid' => true,
                 'rule' => ValidationRules::string

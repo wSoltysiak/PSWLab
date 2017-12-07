@@ -7,15 +7,46 @@
     </h2>
     <form id="submit1" class="library-form" action="index.php?page=form" method="POST">
         <fieldset class="library-form-aligned">
-            <legend style="font-family: fantasy">Przedstaw się</legend>
+            <legend>Przedstaw się</legend>
+            <div class="library-control-group">
+                <input class="library-input-third"
+                       type="text"
+                       name="login"
+                       id="login"
+                       placeholder="Login"
+                       autocomplete="on"
+                       autofocus>
+                <label class="library-form-message-inline" for="login">Wpisz swój login.</label>
+                <?php
+                if (!$this->model->validation['login']['isValid']) {
+                    ?>
+                    <p class="library-form__error">Login jest błędny!</p>
+                    <?php
+                }
+                ?>
+            </div>
+            <div class="library-control-group">
+                <input class="library-input-third"
+                       type="password"
+                       name="password"
+                       id="password"
+                       placeholder="Hasło">
+                <label class="library-form-message-inline" for="password">Wpisz swoje hasło.</label>
+                <?php
+                if (!$this->model->validation['password']['isValid']) {
+                    ?>
+                    <p class="library-form__error">Hasło jest błędne!</p>
+                    <?php
+                }
+                ?>
+            </div>
             <div class="library-control-group">
                 <input class="library-input-third"
                        type="text"
                        name="first-name"
                        id="firstname"
                        placeholder="Imię"
-                       autocomplete="on"
-                       autofocus>
+                       autocomplete="on">
                 <label class="library-form-message-inline" for="firstname">Wpisz swoje imię.</label>
                 <?php
                 if (!$this->model->validation['first-name']['isValid']) {
