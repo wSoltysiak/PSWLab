@@ -3,6 +3,7 @@
 include_once('form.validator.php');
 include_once('utils/validation-rules.php');
 include_once('utils/post-helpers.php');
+include_once('utils/database-helpers.php');
 
 class FormModel {
 
@@ -80,6 +81,19 @@ class FormModel {
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
         return $data;
+    }
+
+    public function isAllValid() {
+        $validArray = array_map(array($this, 'flatValidation'), $this->validation);
+        return array_reduce($validArray, array($this, 'multipleBoolean'), 1);
+    }
+
+    private function flatValidation($elem) {
+        return $elem['isValid'];
+    }
+
+    private function multipleBoolean($acc, $elem) {
+        return $acc * $elem;
     }
 }
 

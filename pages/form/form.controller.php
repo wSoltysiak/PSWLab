@@ -11,6 +11,9 @@ class FormController extends Controller {
         parent::start();
         $this->model = new FormModel();
         $this->model->getPostData();
+        if ($this->model->isAllValid()) {
+//            $this->model->createUser();
+        }
         $this->render();
     }
 
