@@ -9,59 +9,60 @@ class FormModel {
 
     public $validation;
     private $validator;
+
     public function __construct() {
         $this->validator = new FormValidator();
         $this->validation = [
             'login' => [
-                'isValid' => true,
+                'isValid' => false,
                 'rule' => ValidationRules::string
             ],
             'password' => [
-                'isValid' => true,
+                'isValid' => false,
                 'rule' => ValidationRules::password
             ],
             'first-name' => [
-                'isValid' => true,
+                'isValid' => false,
                 'rule' => ValidationRules::string
             ],
             'last-name' => [
-                'isValid' => true,
+                'isValid' => false,
                 'rule' => ValidationRules::string
             ],
             'month' => [
-                'isValid' => true,
+                'isValid' => false,
                 'rule' => ValidationRules::month
             ],
             'email' => [
-                'isValid' => true,
+                'isValid' => false,
                 'rule' => ValidationRules::email
             ],
             'phone' => [
-                'isValid' => true,
+                'isValid' => false,
                 'rule' => ValidationRules::phone
             ],
             'interest' => [
-                'isValid' => true,
+                'isValid' => false,
                 'rule' => ValidationRules::string
             ],
             'book-name' => [
-                'isValid' => true,
+                'isValid' => false,
                 'rule' => ValidationRules::text
             ],
             'book-description' => [
-                'isValid' => true,
+                'isValid' => false,
                 'rule' => ValidationRules::text
             ],
             'age-group' => [
-                'isValid' => true,
+                'isValid' => false,
                 'rule' => ValidationRules::age
             ],
             'first-agreement' => [
-                'isValid' => true,
+                'isValid' => false,
                 'rule' => ValidationRules::boolean
             ],
             'second-agreement' => [
-                'isValid' => true,
+                'isValid' => false,
                 'rule' => ValidationRules::boolean
             ],
         ];
@@ -95,6 +96,35 @@ class FormModel {
     private function multipleBoolean($acc, $elem) {
         return $acc * $elem;
     }
-}
 
-?>
+    public function createUser() {
+        $dbConnection = connectToDatabase();
+        $hash = $this->hashPassword($_POST['password']);
+        $firstAgreement = $this->translateCheckboxToBoolean($_POST['first-agreement']);
+        $secondAgreement = $this->translateCheckboxToBoolean($_POST['second-agreement']);
+        $dbConnection->query("INSERT INTO users SET login = '{$_POST['login']}',
+                                                        password = '{$hash}',
+                                                        firstName = '{$_POST['first-name']}',
+                                                        lastName = '{$_POST['last-name']}',
+                                                        monthName = '{$_POST['month']}',
+                                                        email = '{$_POST['email']}',
+                                                        phone = '{$_POST['phone']}',
+                                                        interest = '{$_POST['interest']}',
+                                                        bookName = '{$_POST['book-name']}',
+                                                        bookDescription = '{$_POST['book-description']}',
+                                                        ageGroup = '{$_POST['age-group']}',
+                                                        firstAgreement = '{$firstAgreement}',
+                                                        secondAgreement = '{$secondAgreement}'
+                            ");
+        echo $dbConnection->error;
+        closeDatabaseConnection($dbConnection);
+    }
+
+    private function hashPassword($password) {
+        return hash('sha256', $password);
+    }
+
+    private function translateCheckboxToBoolean($checkboxValue) {
+        return $checkboxValue === 'on';
+    }
+}

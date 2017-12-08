@@ -12,7 +12,7 @@ class FormController extends Controller {
         $this->model = new FormModel();
         $this->model->getPostData();
         if ($this->model->isAllValid()) {
-//            $this->model->createUser();
+            $this->model->createUser();
         }
         $this->render();
     }
@@ -25,4 +25,3 @@ class FormController extends Controller {
 
 $controller = new FormController();
 $controller->start();
-?>
