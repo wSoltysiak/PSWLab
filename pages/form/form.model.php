@@ -8,7 +8,9 @@ include_once('utils/database-helpers.php');
 class FormModel {
 
     public $validation;
+    public $isUniqueError = false;
     private $validator;
+    private $dbConnection;
 
     public function __construct() {
         $this->validator = new FormValidator();
@@ -66,6 +68,11 @@ class FormModel {
                 'rule' => ValidationRules::boolean
             ],
         ];
+        $this->dbConnection = connectToDatabase();
+    }
+
+    public function __destruct() {
+        closeDatabaseConnection($this->dbConnection);
     }
 
     public function getPostData() {
@@ -97,12 +104,17 @@ class FormModel {
         return $acc * $elem;
     }
 
+    public function isLoginUnique() {
+        $result = $this->dbConnection->query("SELECT count(id) FROM users WHERE login='{$_POST['login']}'");
+        return !mysqli_fetch_row($result)[0];
+    }
+
     public function createUser() {
-        $dbConnection = connectToDatabase();
         $hash = $this->hashPassword($_POST['password']);
         $firstAgreement = $this->translateCheckboxToBoolean($_POST['first-agreement']);
         $secondAgreement = $this->translateCheckboxToBoolean($_POST['second-agreement']);
-        $dbConnection->query("INSERT INTO users SET login = '{$_POST['login']}',
+
+        $this->dbConnection->query("INSERT INTO users SET login = '{$_POST['login']}',
                                                         password = '{$hash}',
                                                         firstName = '{$_POST['first-name']}',
                                                         lastName = '{$_POST['last-name']}',
@@ -116,8 +128,6 @@ class FormModel {
                                                         firstAgreement = '{$firstAgreement}',
                                                         secondAgreement = '{$secondAgreement}'
                             ");
-        echo $dbConnection->error;
-        closeDatabaseConnection($dbConnection);
     }
 
     private function hashPassword($password) {

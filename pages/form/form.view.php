@@ -23,6 +23,11 @@
                     <p class="library-form__error">Login jest błędny!</p>
                     <?php
                 }
+                if (!$this->model->isLoginUnique()) {
+                    ?>
+                    <p class="library-form__error">Ten login jest zajęty, przykro nam.</p>
+                    <?php
+                }
                 ?>
             </div>
             <div class="library-control-group">
