@@ -6,6 +6,13 @@
         Formularz zapisu do zajęć bibliotecznych - cz. 1
     </h2>
     <form id="submit1" class="library-form" action="index.php?page=form" method="POST">
+        <?php
+        if ($this->model->success) {
+            ?>
+            <p class="library-form__message library-form__message--success">Konto zostało utworzone.</p>
+            <?php
+        }
+        ?>
         <fieldset class="library-form-aligned">
             <legend>Przedstaw się</legend>
             <div class="library-control-group">
@@ -20,12 +27,12 @@
                 <?php
                 if (!$this->model->validation['login']['isValid']) {
                     ?>
-                    <p class="library-form__error">Login jest błędny!</p>
+                    <p class="library-form__message library-form__message--error">Login jest błędny!</p>
                     <?php
                 }
-                if (!$this->model->isLoginUnique()) {
+                if ($this->model->isUniqueError) {
                     ?>
-                    <p class="library-form__error">Ten login jest zajęty, przykro nam.</p>
+                    <p class="library-form__message library-form__message--error">Ten login jest zajęty, przykro nam.</p>
                     <?php
                 }
                 ?>
@@ -40,7 +47,7 @@
                 <?php
                 if (!$this->model->validation['password']['isValid']) {
                     ?>
-                    <p class="library-form__error">Hasło jest błędne!</p>
+                    <p class="library-form__message library-form__message--error">Hasło jest błędne!</p>
                     <?php
                 }
                 ?>
@@ -56,7 +63,7 @@
                 <?php
                 if (!$this->model->validation['first-name']['isValid']) {
                     ?>
-                    <p class="library-form__error">Imię jest błędne!</p>
+                    <p class="library-form__message library-form__message--error">Imię jest błędne!</p>
                     <?php
                 }
                 ?>
@@ -73,7 +80,7 @@
                 <?php
                 if (!$this->model->validation['last-name']['isValid']) {
                     ?>
-                    <p class="library-form__error">Nazwisko jest błędne!</p>
+                    <p class="library-form__message library-form__message--error">Nazwisko jest błędne!</p>
                     <?php
                 }
                 ?>
@@ -102,7 +109,7 @@
                 <?php
                 if (!$this->model->validation['month']['isValid']) {
                     ?>
-                    <p class="library-form__error">Miesiąc jest błędny!</p>
+                    <p class="library-form__message library-form__message--error">Miesiąc jest błędny!</p>
                     <?php
                 }
                 ?>
@@ -119,7 +126,7 @@
                 <?php
                 if (!$this->model->validation['email']['isValid']) {
                     ?>
-                    <p class="library-form__error">Email jest błędny!</p>
+                    <p class="library-form__message library-form__message--error">Email jest błędny!</p>
                     <?php
                 }
                 ?>
@@ -136,7 +143,7 @@
                 <?php
                 if (!$this->model->validation['phone']['isValid']) {
                     ?>
-                    <p class="library-form__error">Numer telefonu jest błędny!</p>
+                    <p class="library-form__message library-form__message--error">Numer telefonu jest błędny!</p>
                     <?php
                 }
                 ?>
@@ -169,7 +176,7 @@
             <?php
             if (!$this->model->validation['book-name']['isValid']) {
                 ?>
-                <p class="library-form__error">Tytuł jest błędny!</p>
+                <p class="library-form__message library-form__message--error">Tytuł jest błędny!</p>
                 <?php
             }
             ?>
@@ -180,7 +187,7 @@
             <?php
             if (!$this->model->validation['book-description']['isValid']) {
                 ?>
-                <p class="library-form__error">Opis jest błędny!</p>
+                <p class="library-form__message library-form__message--error">Opis jest błędny!</p>
                 <?php
             }
             ?>
@@ -194,7 +201,7 @@
             <?php
             if (!$this->model->validation['age-group']['isValid']) {
                 ?>
-                <p class="library-form__error">Grupa jest błędna!</p>
+                <p class="library-form__message library-form__message--error">Grupa jest błędna!</p>
                 <?php
             }
             ?>
@@ -207,7 +214,7 @@
             <?php
             if (!$this->model->validation['first-agreement']['isValid']) {
                 ?>
-                <p class="library-form__error">Pole obowiązkowe</p>
+                <p class="library-form__message library-form__message--error">Pole obowiązkowe</p>
                 <?php
             }
             ?>

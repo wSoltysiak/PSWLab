@@ -9,6 +9,7 @@ class FormModel {
 
     public $validation;
     public $isUniqueError = false;
+    public $success = false;
     private $validator;
     private $dbConnection;
 
@@ -114,7 +115,7 @@ class FormModel {
         $firstAgreement = $this->translateCheckboxToBoolean($_POST['first-agreement']);
         $secondAgreement = $this->translateCheckboxToBoolean($_POST['second-agreement']);
 
-        $this->dbConnection->query("INSERT INTO users SET login = '{$_POST['login']}',
+        return $this->dbConnection->query("INSERT INTO users SET login = '{$_POST['login']}',
                                                         password = '{$hash}',
                                                         firstName = '{$_POST['first-name']}',
                                                         lastName = '{$_POST['last-name']}',

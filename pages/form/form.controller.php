@@ -11,10 +11,9 @@ class FormController extends Controller {
         parent::start();
         $this->model = new FormModel();
         $this->model->getPostData();
-        print_r($this->model->isAllValid());
-        $this->model->isUniqueError = $this->model->isLoginUnique();
-        if ($this->model->isAllValid() && $this->model->isUniqueError) {
-            $this->model->createUser();
+        $this->model->isUniqueError = !$this->model->isLoginUnique();
+        if ($this->model->isAllValid() && !$this->model->isUniqueError) {
+            $this->model->success = $this->model->createUser();
         }
         $this->render();
     }
