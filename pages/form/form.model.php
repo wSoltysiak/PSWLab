@@ -2,7 +2,6 @@
 
 include_once('form.validator.php');
 include_once('utils/validation-rules.php');
-include_once('utils/post-helpers.php');
 include_once('utils/database-helpers.php');
 
 class FormModel {
@@ -17,57 +16,53 @@ class FormModel {
         $this->validator = new FormValidator();
         $this->validation = [
             'login' => [
-                'isValid' => false,
+                'isValid' => true,
                 'rule' => ValidationRules::string
             ],
             'password' => [
-                'isValid' => false,
+                'isValid' => true,
                 'rule' => ValidationRules::password
             ],
             'first-name' => [
-                'isValid' => false,
+                'isValid' => true,
                 'rule' => ValidationRules::string
             ],
             'last-name' => [
-                'isValid' => false,
+                'isValid' => true,
                 'rule' => ValidationRules::string
             ],
             'month' => [
-                'isValid' => false,
+                'isValid' => true,
                 'rule' => ValidationRules::month
             ],
             'email' => [
-                'isValid' => false,
+                'isValid' => true,
                 'rule' => ValidationRules::email
             ],
             'phone' => [
-                'isValid' => false,
+                'isValid' => true,
                 'rule' => ValidationRules::phone
             ],
             'interest' => [
-                'isValid' => false,
+                'isValid' => true,
                 'rule' => ValidationRules::string
             ],
             'book-name' => [
-                'isValid' => false,
+                'isValid' => true,
                 'rule' => ValidationRules::text
             ],
             'book-description' => [
-                'isValid' => false,
+                'isValid' => true,
                 'rule' => ValidationRules::text
             ],
             'age-group' => [
-                'isValid' => false,
+                'isValid' => true,
                 'rule' => ValidationRules::age
             ],
             'first-agreement' => [
-                'isValid' => false,
+                'isValid' => true,
                 'rule' => ValidationRules::boolean
-            ],
-            'second-agreement' => [
-                'isValid' => false,
-                'rule' => ValidationRules::boolean
-            ],
+            ]
         ];
         $this->dbConnection = connectToDatabase();
     }
@@ -77,11 +72,9 @@ class FormModel {
     }
 
     public function getPostData() {
-        if (isPostRequest()) {
-            foreach ($this->validation as $key => $value) {
-                $clearData = $this->clearInput($_POST[$key]);
-                $this->validation[$key]['isValid'] = $this->validator->valid($value['rule'], $clearData);
-            }
+        foreach ($this->validation as $key => $value) {
+            $clearData = $this->clearInput($_POST[$key]);
+            $this->validation[$key]['isValid'] = $this->validator->valid($value['rule'], $clearData);
         }
     }
 
@@ -136,6 +129,6 @@ class FormModel {
     }
 
     private function translateCheckboxToBoolean($checkboxValue) {
-        return $checkboxValue === 'on';
+        return (int)($checkboxValue === 'on');
     }
 }

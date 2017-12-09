@@ -2,6 +2,7 @@
 
 include_once('utils/controller.abstract.php');
 include_once('form.model.php');
+include_once('utils/post-helpers.php');
 
 class FormController extends Controller {
     const view = 'form.view.php';
@@ -10,10 +11,12 @@ class FormController extends Controller {
     public function start() {
         parent::start();
         $this->model = new FormModel();
-        $this->model->getPostData();
-        $this->model->isUniqueError = !$this->model->isLoginUnique();
-        if ($this->model->isAllValid() && !$this->model->isUniqueError) {
-            $this->model->success = $this->model->createUser();
+        if (isPostRequest()) {
+            $this->model->getPostData();
+            $this->model->isUniqueError = !$this->model->isLoginUnique();
+            if ($this->model->isAllValid() && !$this->model->isUniqueError) {
+                $this->model->success = $this->model->createUser();
+            }
         }
         $this->render();
     }

@@ -3,7 +3,7 @@
 
 <section class="info-section">
     <h2 class="info-section__header">
-        Formularz zapisu do zajęć bibliotecznych - cz. 1
+        Formularz zapisu do zajęć bibliotecznych
     </h2>
     <form id="submit1" class="library-form" action="index.php?page=form" method="POST">
         <?php

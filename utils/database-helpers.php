@@ -21,7 +21,7 @@ function createDatabase($connection) {
     return $connection->query('
       CREATE TABLE users(
         `id` INT NOT NULL AUTO_INCREMENT,
-        `login` VARCHAR(255) NOT NULL,
+        `login` VARCHAR(255) NOT NULL UNIQUE,
         `password` VARCHAR(64) NOT NULL,
         `firstName` VARCHAR(20) NOT NULL,
         `lastName` VARCHAR(20) NOT NULL,
