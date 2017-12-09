@@ -10,6 +10,7 @@ function connectToDatabase() {
         die('Błąd podczas komunikacji z bazą danych');
     }
 
+    $connection->set_charset("utf8");
     $connection->select_db('biblioteka');
 
     return $connection;
@@ -25,7 +26,7 @@ function createDatabase($connection) {
         `password` VARCHAR(64) NOT NULL,
         `firstName` VARCHAR(20) NOT NULL,
         `lastName` VARCHAR(20) NOT NULL,
-        `monthName` VARCHAR(11) NOT NULL,
+        `monthName` VARCHAR(12) NOT NULL,
         `email` VARCHAR(255) NOT NULL,
         `phone` VARCHAR(12) NOT NULL,
         `interest` VARCHAR(255) NOT NULL,
@@ -35,7 +36,7 @@ function createDatabase($connection) {
         `firstAgreement` BOOLEAN NOT NULL DEFAULT FALSE,
         `secondAgreement` BOOLEAN NOT NULL DEFAULT FALSE,
         PRIMARY KEY (`id`)
-      ) ENGINE = InnoDB'
+      ) CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = InnoDB'
     );
 }
 

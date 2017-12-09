@@ -47,7 +47,7 @@
                 <?php
                 if (!$this->model->validation['password']['isValid']) {
                     ?>
-                    <p class="library-form__message library-form__message--error">Hasło jest błędne!</p>
+                    <p class="library-form__message library-form__message--error">Hasło powinno zawierać duże litery, cyfry i mieć min. 8 znaków.</p>
                     <?php
                 }
                 ?>
@@ -101,7 +101,7 @@
                     <option value="Lipiec">
                     <option value="Sierpień">
                     <option value="Wrzesień">
-                    <option value="Paźdiernik">
+                    <option value="Październik">
                     <option value="Listopad">
                     <option value="Grudzień">
                 </datalist>

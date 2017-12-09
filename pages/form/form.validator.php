@@ -27,15 +27,15 @@ class FormValidator {
     }
 
     private function validString($data) {
-        return preg_match("/^[a-zA-Z]+$/", $data);
+        return preg_match("/^[\p{L}a-zA-Z]+$/u", $data);
     }
 
     private function validText($data) {
-        return preg_match("/^[a-zA-Z0-9]+$/", $data);
+        return preg_match("/^[\p{L}a-zA-Z0-9]+$/u", $data);
     }
 
     private function validMonth($data) {
-        $months = ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Paździenik', 'Listopad', 'Grudzień'];
+        $months = ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień'];
         return in_array($data, $months);
     }
 
