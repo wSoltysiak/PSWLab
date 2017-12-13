@@ -14,12 +14,19 @@ class FormController extends Controller {
         $this->model = new FormModel();
         if($this->model->isLogged()){
             $this->model->toCookie($this->model->getUserData());
-        }
-        if (isPostRequest()) {
-            $this->model->getPostData();
-            $this->model->isUniqueError = !$this->model->isLoginUnique();
-            if ($this->model->isAllValid() && !$this->model->isUniqueError) {
-                $this->model->success = $this->model->createUser();
+            if (isPostRequest()) {
+                $this->model->getPostData();
+                if ($this->model->isAllValid() && !$this->model->isUniqueError) {
+                    $this->model->success = $this->model->createUser();
+                }
+            }
+        }else {
+            if (isPostRequest()) {
+                $this->model->getPostData();
+                $this->model->isUniqueError = !$this->model->isLoginUnique();
+                if ($this->model->isAllValid() && !$this->model->isUniqueError) {
+                    $this->model->success = $this->model->createUser();
+                }
             }
         }
         $this->render();
