@@ -1,7 +1,7 @@
-<link rel="stylesheet" type="text/css" href="assets/css/main-footer.css">
-
-<footer class="main-footer">
-    <span class="main-footer__text">&copy; Biblioteka miejska w Złotowie - 2017</span>
+<!--Footer-->
+<footer class="footer">
+    <div class="container">
+        <span class="text-muted">&copy; Biblioteka miejska w Złotowie - 2017</span>
+    </div>
 </footer>
-</body>
 </html>

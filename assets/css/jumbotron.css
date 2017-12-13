@@ -1,0 +1,6 @@
+.home-jumbotron{
+    background-image: url(../img/library.jpg);
+    background-position: center center;
+    background-size: cover;
+    color:white;
+}
