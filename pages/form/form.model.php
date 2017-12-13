@@ -118,6 +118,7 @@ class FormModel {
         $hash = $this->hashPassword($_POST['password']);
         $firstAgreement = $this->translateCheckboxToBoolean($_POST['first-agreement']);
         $secondAgreement = $this->translateCheckboxToBoolean($_POST['second-agreement']);
+        $phone = quotemeta($_POST['phone']);
 
         return $this->dbConnection->query("INSERT INTO users SET login = '{$_POST['login']}',
                                                         password = '{$hash}',
@@ -125,7 +126,7 @@ class FormModel {
                                                         lastName = '{$_POST['last-name']}',
                                                         monthName = '{$_POST['month']}',
                                                         email = '{$_POST['email']}',
-                                                        phone = '{$_POST['phone']}',
+                                                        phone = '{$phone}',
                                                         interest = '{$_POST['interest']}',
                                                         bookName = '{$_POST['book-name']}',
                                                         bookDescription = '{$_POST['book-description']}',
@@ -139,6 +140,7 @@ class FormModel {
         $hash = $this->hashPassword($_POST['password']);
         $firstAgreement = $this->translateCheckboxToBoolean($_POST['first-agreement']);
         $secondAgreement = $this->translateCheckboxToBoolean($_POST['second-agreement']);
+        $phone = quotemeta($_POST['phone']);
 
         return $this->dbConnection->query("UPDATE users SET
                                                         password = '{$hash}',
@@ -146,7 +148,7 @@ class FormModel {
                                                         lastName = '{$_POST['last-name']}',
                                                         monthName = '{$_POST['month']}',
                                                         email = '{$_POST['email']}',
-                                                        phone = '{$_POST['phone']}',
+                                                        phone = '{$phone}',
                                                         interest = '{$_POST['interest']}',
                                                         bookName = '{$_POST['book-name']}',
                                                         bookDescription = '{$_POST['book-description']}',
