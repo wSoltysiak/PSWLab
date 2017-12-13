@@ -85,14 +85,6 @@ class FormModel {
         return mysqli_fetch_row($user)[0];
     }
 
-    public function toCookie($data){
-        if (is_array($data)) {
-            foreach ($data as $key => $value) {
-                setcookie($key, $value);
-            }
-        }
-    }
-
     public function isLogged(){
         return isset($_SESSION['isLogged']);
     }

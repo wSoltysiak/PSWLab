@@ -12,17 +12,13 @@ class FormController extends Controller {
     public function start() {
         parent::start();
         $this->model = new FormModel();
-        if($this->model->isLogged()){
-            $this->model->toCookie($this->model->getUserData());
-            if (isPostRequest()) {
-                $this->model->getPostData();
-                if ($this->model->isAllValid() && !$this->model->isUniqueError) {
-                    $this->model->success = $this->model->createUser();
+        if (isPostRequest()) {
+            $this->model->getPostData();
+            if ($this->model->isLogged()) {
+                if ($this->model->isAllValid()) {
+                    $this->model->success = $this->model->updateUser();
                 }
-            }
-        }else {
-            if (isPostRequest()) {
-                $this->model->getPostData();
+            } else {
                 $this->model->isUniqueError = !$this->model->isLoginUnique();
                 if ($this->model->isAllValid() && !$this->model->isUniqueError) {
                     $this->model->success = $this->model->createUser();
