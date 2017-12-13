@@ -21,6 +21,9 @@
             <?php if (isset($_SESSION['isLogged']) && $_SESSION['isLogged']) { ?>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
+                        <a class="nav-link" href="index.php?page=form">Edycja konta</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="index.php?page=logout">Wyloguj</a>
                     </li>
                 </ul>

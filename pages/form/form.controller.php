@@ -6,11 +6,15 @@ include_once('utils/post-helpers.php');
 
 class FormController extends Controller {
     const view = 'form.view.php';
+    const filledView = 'form.view.php';
     private $model;
 
     public function start() {
         parent::start();
         $this->model = new FormModel();
+        if($this->model->isLogged()){
+            $this->model->toCookie($this->model->getUserData());
+        }
         if (isPostRequest()) {
             $this->model->getPostData();
             $this->model->isUniqueError = !$this->model->isLoginUnique();

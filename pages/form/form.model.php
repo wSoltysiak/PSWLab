@@ -78,6 +78,22 @@ class FormModel {
         }
     }
 
+    public function getUserData(){
+        $login = $_SESSION['login'];
+        $user = $this->dbConnection->query("SELECT * FROM users WHERE 'login' = $login");
+        return mysqli_fetch_row($user);
+    }
+
+    public function toCookie($data){
+        foreach (key($data) as $atribute){
+            setcookie($atribute, $data[$atribute]);
+        }
+    }
+
+    public function isLogged(){
+        return isset($_SESSION['isLogged']);
+    }
+
     private function clearInput($data) {
         $data = trim($data);
         $data = stripslashes($data);
@@ -130,5 +146,9 @@ class FormModel {
 
     private function translateCheckboxToBoolean($checkboxValue) {
         return (int)($checkboxValue === 'on');
+    }
+
+    private function setUpCookie() {
+        setcookie("SessionID", session_id());
     }
 }

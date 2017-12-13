@@ -13,7 +13,7 @@
     <div class="form-row">
         <div class="form-group col-md-6">
             <label class="" for="login">Login</label>
-            <input class="form-control" type="text" name="login" id="login" placeholder="Login" autocomplete="on" autofocus>
+            <input class="form-control" type="text" name="login" id="login" placeholder="Login" autocomplete="on" autofocus value="<?= $_COOKIE['login']?>">
 
             <?php
             if (!$this->model->validation['login']['isValid']) {
@@ -46,7 +46,7 @@
     <div class="form-row">
         <div class="form-group col-md-4">
             <label class="" for="firstname">Imię</label>
-            <input class="form-control" type="text" name="first-name" id="firstname" placeholder="Imię" autocomplete="on">
+            <input class="form-control" type="text" name="first-name" id="firstname" placeholder="Imię" autocomplete="on" value="<?= $_COOKIE['firstName']?>">
 
             <?php
             if (!$this->model->validation['first-name']['isValid']) {
@@ -59,7 +59,7 @@
         </div>
         <div class="form-group col-md-4">
             <label class="" for="lastname">Nazwisko</label>
-            <input class="form-control" type="text" id="lastname" name="last-name" placeholder="Nazwisko" autocomplete="on" required>
+            <input class="form-control" type="text" id="lastname" name="last-name" placeholder="Nazwisko" autocomplete="on" required value="<?= $_COOKIE['lastName']?>">
 
             <?php
             if (!$this->model->validation['last-name']['isValid']) {
@@ -72,7 +72,7 @@
         </div>
         <div class="form-group col-md-4">
             <label class="" for="email">Email</label>
-            <input class="form-control" type="email" id="email" name="email" placeholder="Adres email" autocomplete="on" required>
+            <input class="form-control" type="email" id="email" name="email" placeholder="Adres email" autocomplete="on" required value="<?= $_COOKIE['email']?>">
 
             <?php
             if (!$this->model->validation['email']['isValid']) {
@@ -86,7 +86,7 @@
     </div>
     <div class="form-group">
         <label class="" for="months-visible">Miesiąc urodzenia</label>
-        <input class="form-control" name="month" id="months-visible" list="months" placeholder="Miesiąc">
+        <input class="form-control" name="month" id="months-visible" list="months" placeholder="Miesiąc" value="<?= $_COOKIE['monthName']?>">
         <datalist id="months">
             <option value="Styczeń">
             <option value="Luty">
@@ -113,7 +113,7 @@
     </div>
     <div class="form-group">
         <label class="" for="tel">Numer telefonu</label>
-        <input class="form-control" type="tel" id="tel" name="phone" placeholder="999 999 999" autocomplete="on" pattern="\d{3}[\s]\d{3}[\s]\d{3}">
+        <input class="form-control" type="tel" id="tel" name="phone" placeholder="999 999 999" autocomplete="on" pattern="\d{3}[\s]\d{3}[\s]\d{3}" value="<?= $_COOKIE['phone']?>">
 
         <?php
         if (!$this->model->validation['phone']['isValid']) {
@@ -170,17 +170,17 @@
     <legend>Do jakiej grupy chcesz uczęszczać?</legend>
     <div class="form-check">
         <label class="form-check-label">
-            <input type="radio" name="age-group" value="teenager"> Grupa młodzieżowa
+            <input type="radio" name="age-group" value="teenager" <?php if($_COOKIE['ageGroup'] == 'teenager') echo "checked" ?> > Grupa młodzieżowa
         </label>
     </div>
     <div class="form-check">
         <label class="form-check-label">
-            <input type="radio" name="age-group" value="adult"> Grupa dla dorosłych
+            <input type="radio" name="age-group" value="adult" <?php if($_COOKIE['ageGroup'] == 'adult') echo "checked" ?> >  Grupa dla dorosłych
         </label>
     </div>
     <div class="form-check">
         <label class="form-check-label">
-            <input type="radio" name="age-group" value="senior"> Grupa dla seniorow
+            <input type="radio" name="age-group" value="senior" <?php if($_COOKIE['ageGroup'] == 'senior') echo "checked" ?> > Grupa dla seniorow
         </label>
     </div>
 
@@ -196,7 +196,7 @@
     <legend>Zaznacz wybrane pola</legend>
     <div class="form-check">
         <label class="form-check-label">
-            <input id="regulamin" type="checkbox" name="first-agreement"> Zgadzam się z regulaminem zajęć.
+            <input id="regulamin" type="checkbox" name="first-agreement" <?php if($_COOKIE['firstAgreement'] == '1') echo "checked" ?> > Zgadzam się z regulaminem zajęć.
         </label>
     </div>
 
@@ -210,7 +210,7 @@
 
     <div class="form-check">
         <label class="form-check-label">
-            <input id="newsletter" type="checkbox" name="second-agreement"> Chcę otrzymywać emaile z materiałami zajęciowymi.
+            <input id="newsletter" type="checkbox" name="second-agreement" <?php if($_COOKIE['secondAgreement'] == '1') echo "checked" ?> > Chcę otrzymywać emaile z materiałami zajęciowymi.
         </label>
     </div>
 </fieldset>
