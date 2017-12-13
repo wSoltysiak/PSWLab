@@ -9,6 +9,7 @@ class FormModel {
     public $validation;
     public $isUniqueError = false;
     public $success = false;
+    public $userData;
     private $validator;
     private $dbConnection;
 
@@ -80,9 +81,8 @@ class FormModel {
 
     public function getUserData(){
         $login = $_SESSION['login'];
-        print_r($login);
-        $user = $this->dbConnection->query("SELECT * FROM users WHERE login='{$_POST['login']}'");
-        return mysqli_fetch_row($user)[0];
+        $user = $this->dbConnection->query("SELECT * FROM users WHERE login='{$login}'");
+        return mysqli_fetch_row($user);
     }
 
     public function isLogged(){

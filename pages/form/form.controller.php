@@ -12,6 +12,10 @@ class FormController extends Controller {
     public function start() {
         parent::start();
         $this->model = new FormModel();
+        if ($this->model->isLogged()) {
+            $this->model->userData = $this->model->getUserData();
+        }
+
         if (isPostRequest()) {
             $this->model->getPostData();
             if ($this->model->isLogged()) {

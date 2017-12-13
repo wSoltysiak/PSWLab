@@ -13,7 +13,7 @@
     <div class="form-row">
         <div class="form-group col-md-6">
             <label class="" for="login">Login</label>
-            <input class="form-control" type="text" name="login" id="login" placeholder="Login" autocomplete="on" autofocus value="<?= $_COOKIE['login']?>">
+            <input class="form-control" type="text" name="login" id="login" placeholder="Login" autocomplete="on" autofocus value="<?= $this->model->userData[1] ?>">
 
             <?php
             if (!$this->model->validation['login']['isValid']) {
@@ -46,7 +46,7 @@
     <div class="form-row">
         <div class="form-group col-md-4">
             <label class="" for="firstname">Imię</label>
-            <input class="form-control" type="text" name="first-name" id="firstname" placeholder="Imię" autocomplete="on" value="<?= $_COOKIE['firstName']?>">
+            <input class="form-control" type="text" name="first-name" id="firstname" placeholder="Imię" autocomplete="on" value="<?= $this->model->userData[3] ?>">
 
             <?php
             if (!$this->model->validation['first-name']['isValid']) {
@@ -59,7 +59,7 @@
         </div>
         <div class="form-group col-md-4">
             <label class="" for="lastname">Nazwisko</label>
-            <input class="form-control" type="text" id="lastname" name="last-name" placeholder="Nazwisko" autocomplete="on" required value="<?= $_COOKIE['lastName']?>">
+            <input class="form-control" type="text" id="lastname" name="last-name" placeholder="Nazwisko" autocomplete="on" required value="<?= $this->model->userData[4] ?>">
 
             <?php
             if (!$this->model->validation['last-name']['isValid']) {
@@ -72,7 +72,7 @@
         </div>
         <div class="form-group col-md-4">
             <label class="" for="email">Email</label>
-            <input class="form-control" type="email" id="email" name="email" placeholder="Adres email" autocomplete="on" required value="<?= $_COOKIE['email']?>">
+            <input class="form-control" type="email" id="email" name="email" placeholder="Adres email" autocomplete="on" required value="<?= $this->model->userData[6] ?>">
 
             <?php
             if (!$this->model->validation['email']['isValid']) {
@@ -86,7 +86,7 @@
     </div>
     <div class="form-group">
         <label class="" for="months-visible">Miesiąc urodzenia</label>
-        <input class="form-control" name="month" id="months-visible" list="months" placeholder="Miesiąc" value="<?= $_COOKIE['monthName']?>">
+        <input class="form-control" name="month" id="months-visible" list="months" placeholder="Miesiąc" value="<?= $this->model->userData[5] ?>">
         <datalist id="months">
             <option value="Styczeń">
             <option value="Luty">
@@ -113,7 +113,7 @@
     </div>
     <div class="form-group">
         <label class="" for="tel">Numer telefonu</label>
-        <input class="form-control" type="tel" id="tel" name="phone" placeholder="999 999 999" autocomplete="on" pattern="\d{3}[\s]\d{3}[\s]\d{3}" value="<?= $_COOKIE['phone']?>">
+        <input class="form-control" type="tel" id="tel" name="phone" placeholder="999 999 999" autocomplete="on" pattern="\d{3}[\s]\d{3}[\s]\d{3}" value="<?= $this->model->userData[7] ?>">
 
         <?php
         if (!$this->model->validation['phone']['isValid']) {
@@ -131,20 +131,20 @@
     Książki
     <select name="interest">
         <optgroup label="Fabularne">
-            <option value="adventure">Przygodowe</option>
-            <option value="criminal">Kryminalne</option>
-            <option value="fantasy">Fantastyka</option>
-            <option value="sci-fi">Science Fiction</option>
+            <option value="adventure" <?= $this->model->userData[8] === 'adventure' ? 'selected' : '' ?>>Przygodowe</option>
+            <option value="criminal" <?= $this->model->userData[8] === 'criminal' ? 'selected' : '' ?>>Kryminalne</option>
+            <option value="fantasy" <?= $this->model->userData[8] === 'fantasy' ? 'selected' : '' ?>>Fantastyka</option>
+            <option value="sci-fi" <?= $this->model->userData[8] === 'sci-fi' ? 'selected' : '' ?>>Science Fiction</option>
         </optgroup>
         <optgroup label="Naukowe">
-            <option value="historical">Historyczne</option>
+            <option value="historical" <?= $this->model->userData[8] === 'historical' ? 'selected' : '' ?>>Historyczne</option>
         </optgroup>
     </select>
 </fieldset>
 
 <fieldset class="library-group">
     <legend>Opisz swoją ulubioną książkę</legend>
-    <input id="book-name" name="book-name" class="form-control" type="text" placeholder="Tytuł książki">
+    <input id="book-name" name="book-name" class="form-control" type="text" placeholder="Tytuł książki" value="<?= $this->model->userData[9] ?>">
 
     <?php
     if (!$this->model->validation['book-name']['isValid']) {
@@ -154,7 +154,7 @@
     }
     ?>
 
-    <textarea class="form-control" rows="3" name="book-description" maxlength="200" placeholder="Co Ci sie w niej podobało?"></textarea>
+    <textarea class="form-control" rows="3" name="book-description" maxlength="200" placeholder="Co Ci sie w niej podobało?"><?= $this->model->userData[10] ?></textarea>
 
     <?php
     if (!$this->model->validation['book-description']['isValid']) {
@@ -170,17 +170,17 @@
     <legend>Do jakiej grupy chcesz uczęszczać?</legend>
     <div class="form-check">
         <label class="form-check-label">
-            <input type="radio" name="age-group" value="teenager" <?php if($_COOKIE['ageGroup'] == 'teenager') echo "checked" ?> > Grupa młodzieżowa
+            <input type="radio" name="age-group" value="teenager" <?php if($this->model->userData[11] === 'teenager') echo "checked" ?> > Grupa młodzieżowa
         </label>
     </div>
     <div class="form-check">
         <label class="form-check-label">
-            <input type="radio" name="age-group" value="adult" <?php if($_COOKIE['ageGroup'] == 'adult') echo "checked" ?> >  Grupa dla dorosłych
+            <input type="radio" name="age-group" value="adult" <?php if($this->model->userData[11] === 'adult') echo "checked" ?> >  Grupa dla dorosłych
         </label>
     </div>
     <div class="form-check">
         <label class="form-check-label">
-            <input type="radio" name="age-group" value="senior" <?php if($_COOKIE['ageGroup'] == 'senior') echo "checked" ?> > Grupa dla seniorow
+            <input type="radio" name="age-group" value="senior" <?php if($this->model->userData[11] === 'senior') echo "checked" ?> > Grupa dla seniorow
         </label>
     </div>
 
@@ -196,7 +196,7 @@
     <legend>Zaznacz wybrane pola</legend>
     <div class="form-check">
         <label class="form-check-label">
-            <input id="regulamin" type="checkbox" name="first-agreement" <?php if($_COOKIE['firstAgreement'] == '1') echo "checked" ?> > Zgadzam się z regulaminem zajęć.
+            <input id="regulamin" type="checkbox" name="first-agreement" <?php if($this->model->userData[12] === '1') echo "checked" ?> > Zgadzam się z regulaminem zajęć.
         </label>
     </div>
 
@@ -210,7 +210,7 @@
 
     <div class="form-check">
         <label class="form-check-label">
-            <input id="newsletter" type="checkbox" name="second-agreement" <?php if($_COOKIE['secondAgreement'] == '1') echo "checked" ?> > Chcę otrzymywać emaile z materiałami zajęciowymi.
+            <input id="newsletter" type="checkbox" name="second-agreement" <?php if($this->model->userData[12] === '1') echo "checked" ?> > Chcę otrzymywać emaile z materiałami zajęciowymi.
         </label>
     </div>
 </fieldset>
