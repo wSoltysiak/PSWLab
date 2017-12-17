@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="assets/css/table.css">
-
+<div class="container">
 <section class="info-section">
     <h2 class="info-section__header">
         Spis pracownikow biblioteki
@@ -191,3 +191,4 @@
         </aside>
     </article>
 </section>
+</div>

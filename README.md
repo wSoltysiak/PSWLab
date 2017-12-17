@@ -8,4 +8,6 @@
 - [x] XAMPP & ASP.NET
 - [x] PHP_1
 - [x] PHP_2
-- [ ] PHP_3
+- [x] PHP_3
+
+Wersja serwisu pod ASP.NET na osobnym repo!

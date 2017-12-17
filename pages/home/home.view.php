@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/assets/css/info-section.css">
 <section class="info-section info-section--columned">
     <h2 class="info-section__header info-section__header--big info-section__header--columned">Informacje o naszej bibliotece</h2>
     <article>
@@ -58,6 +59,3 @@
         <a href="ftp://sunsite.icm.edu.pl/pub/BSD/FreeBSD/releases/amd64/11.1-RELEASE/kernel.txz" download="kernel.txz">FreeBSD</a>
     </article>
 </section>
-
-<div class="collection-info"></div>
-<script src="assets/js/anchorhings.js"></script>

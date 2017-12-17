@@ -6,11 +6,14 @@
     <meta name="keywords" content="Biblioteka, Miejska, Książki, Wypożyczenia, Biblioteka Miejska, Czytanie, Czytelnictwo, Edukacja">
     <meta name="author" content="Jakub Nadolny, Wojciech Sołtysiak">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/info-section.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/collection.css">
-    <script src="https://use.fontawesome.com/70f13924e9.js"></script>
-    <!-- TODO: zrobić tytuł z kontrolera -->
-    <title>Biblioteka miejska - strona główna</title>
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/css/jumbotron.css">
+    <link rel="stylesheet" href="./assets/css/carousell.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/feedback.css">
+    <title>Biblioteka miejska</title>
 </head>
 <body>

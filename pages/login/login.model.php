@@ -1,36 +1,45 @@
 <?php
 
 include_once('utils/post-helpers.php');
+include_once('utils/database-helpers.php');
 
 class LoginModel {
     public $loginError = false;
-    private $credentials = [
-        'test' => 'c75de8c1b7c3ae5252091267a736a9bf57001d80e82668b3cb3cd09e2f6a43cb',
-        'admin' => '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918',
-        'kasia' => 'd97b0df52b50f024e60b92c3294bb98179276ef4a9740b599cb60f9834b49825'
-    ];
+    private $dbConnection;
 
     public function login() {
-        if (isPostRequest() && $this->isCorrectCredentials()) {
-            $this->setUpSession();
-            $this->setUpCookie();
-            $this->redirectToProtectedPage();
-        } else {
-            $this->loginError = true;
+        if (isPostRequest()) {
+            $this->dbConnection = connectToDatabase();
+            $isCorrectLogin = isPostRequest() && $this->isCorrectCredentials();
+            closeDatabaseConnection($this->dbConnection);
+
+            if ($isCorrectLogin) {
+                $this->setUpSession();
+                $this->setUpCookie();
+                $this->redirectToProtectedPage();
+            } else {
+                $this->loginError = true;
+            }
         }
     }
 
     private function isCorrectCredentials() {
         $login = $_POST['login'];
         if ($this->isCorrectLogin($login)) {
-            return $this->isCorrectPassword($this->credentials[$login]);
+            $result = $this->dbConnection->query("SELECT password FROM users WHERE login='{$login}'");
+            $passwordToMatch = mysqli_fetch_row($result)[0];
+            return $this->isCorrectPassword($passwordToMatch);
         }
 
         return false;
     }
 
     private function isCorrectLogin($login) {
-        return isset($login) && array_key_exists($login, $this->credentials);
+        if (isset($login)) {
+            $result = $this->dbConnection->query("SELECT count(id) FROM users WHERE login='{$login}'");
+            return mysqli_fetch_row($result)[0];
+        }
+        return false;
     }
 
     private function isCorrectPassword($passwordToMatch) {

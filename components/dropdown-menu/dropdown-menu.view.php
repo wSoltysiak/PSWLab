@@ -1,29 +1,42 @@
-<link rel="stylesheet" type="text/css" href="components/dropdown-menu/dropdown-menu.style.css">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Biblioteka</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-<nav class="dropdown-menu">
-    <ul class="dropdown-menu__first-level">
-        <li><a href="index.php?page=home">Strona główna</a></li>
-        <li><a href="index.php?page=gallery">Galeria</a></li>
-        <li><a href="index.php?page=team">Pracownicy</a></li>
-        <li id="category1">Kontakt
-            <ul id="category1__submenu" class="dropdown-menu__box dropdown-menu__box--submenu">
-                <li><a href="mailto:bibl@zlotow.pl">Kontakt</a></li>
-                <li><a href="http://www.gminazlotow.pl/">Gmina Złotów</a></li>
-                <li id="subcategory1">Podkategoria 3
-                    <ul id="subcategory1__submenu" class="dropdown-menu__box dropdown-menu__box--subsubmenu">
-                        <li>Podkategoria 1</li>
-                        <li>Podkategoria 2</li>
-                        <li>Podkategoria 3</li>
-                    </ul>
+        <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?page=home">Strona głowna</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?page=gallery">Galeria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?page=team">Pracownicy</a>
                 </li>
             </ul>
-        </li>
-        <li><a href="index.php?page=form">Zajęcia biblioteczne</a></li>
-        <li><a href="index.php?page=user">Panel Użytkownika</a></li>
-        <?php if (isset($_SESSION['isLogged']) && $_SESSION['isLogged']) { ?>
-            <li><a href="index.php?page=logout">Wyloguj się</a></li>
-        <?php } else { ?>
-            <li><a href="index.php?page=login">Zaloguj się</a></li>
-        <?php } ?>
-    </ul>
+
+            <?php if (isset($_SESSION['isLogged']) && $_SESSION['isLogged']) { ?>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php?page=form">Edycja konta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php?page=logout">Wyloguj</a>
+                    </li>
+                </ul>
+            <?php } else { ?>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php?page=login">Logowanie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php?page=form">Rejestracja</a>
+                    </li>
+                </ul>
+            <?php } ?>
+        </div>
+    </div>
 </nav>

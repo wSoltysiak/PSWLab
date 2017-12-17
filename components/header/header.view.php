@@ -1,13 +1,11 @@
-<link rel="stylesheet" type="text/css" href="components/header/header.style.css">
 
-<header class="welcome-header">
-    <?php include_once('components/dropdown-menu/dropdown-menu.view.php'); ?>
-    <div class="welcome-header__container">
-        <h1 class="welcome-header__header">
-            Biblioteka miejska
-        </h1>
-        <h2 class="welcome-header__header welcome-header__header--small">
-            w Złotowie
-        </h2>
+<?php include_once("components/dropdown-menu/dropdown-menu.view.php");?>
+<link rel="stylesheet" href="assets/css/jumbotron.css">
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron home-jumbotron">
+    <div class="container text-center pt-5 pb-5">
+        <h1 class="display-3">Biblioteka miejska</h1>
+        <h2>w Złotkowie</h2>
     </div>
-</header>
+</div>
+<!-- /container -->

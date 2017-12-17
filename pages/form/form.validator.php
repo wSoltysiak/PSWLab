@@ -19,21 +19,23 @@ class FormValidator {
                 return $this->validAge($data);
             case ValidationRules::boolean:
                 return $this->validBoolean($data);
+            case ValidationRules::password:
+                return $this->validPassword($data);
             default:
                 return false;
         }
     }
 
     private function validString($data) {
-        return preg_match("/^[a-zA-Z]+$/", $data) == 1;
+        return preg_match("/^[\p{L}a-zA-Z]+$/u", $data);
     }
 
     private function validText($data) {
-        return preg_match("/^[a-zA-Z0-9]+$/", $data) == 1;
+        return preg_match("/^[\p{L}a-zA-Z0-9]+$/u", $data);
     }
 
     private function validMonth($data) {
-        $months = ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Paździenik', 'Listopad', 'Grudzień'];
+        $months = ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień'];
         return in_array($data, $months);
     }
 
@@ -42,7 +44,7 @@ class FormValidator {
     }
 
     private function validPhone($data) {
-        return preg_match("/^\d{3} \d{3} \d{3}$/", $data) == 1;
+        return preg_match("/^\d{3} \d{3} \d{3}$/", $data);
     }
 
     private function validAge($data) {
@@ -52,6 +54,10 @@ class FormValidator {
 
     private function validBoolean($data) {
         return strcmp($data, 'on') == 0;
+    }
+
+    private function validPassword($data) {
+        return preg_match('/^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])\S*$/', $data);
     }
 }
 

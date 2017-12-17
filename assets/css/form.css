@@ -69,8 +69,15 @@
     border-bottom-color: crimson;
 }
 
-.library-form__error {
+.library-form__message {
     font-size: 12px;
     margin: 5px;
+}
+
+.library-form__message--error {
     color: #FF0000;
+}
+
+.library-form__message--success {
+    color: #229922;
 }
