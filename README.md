@@ -10,4 +10,5 @@
 - [x] PHP_2
 - [x] PHP_3
 
-Wersja serwisu pod ASP.NET na osobnym repo!
+Repozytorium z zadaniami na PSW (Programowanie Systemów Webowych) [PWr W8].
+Poszczególne etapy można sprawdzać w historii Pull Requestów (każdy etap == osobny branch i osobny Pull Request).
